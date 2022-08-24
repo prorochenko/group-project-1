@@ -66,23 +66,24 @@ img {
   font-weight: 400;
   line-height: 1.5;
 
-  height: 32px;
+  height: 42px;
   padding: 6px 17px 5px 16px;
 
-  border: 1px solid transparent;
+  border: 1px solid #bbf330;
   border-radius: 30px;
   background-color: #bbf330;
   cursor: pointer;
 }
 
 .input {
-  width: 42px;
+  height: 42px;
   border: 1px solid #ffe550;
+  border-radius: 30px;
+  padding: 12px 11px;
 }
 
 input::placeholder {
   font-size: 12px;
   line-height: 1.5;
   color: #505050;
-  padding: 12px 11px;
 }
