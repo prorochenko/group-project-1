@@ -40,6 +40,7 @@
 .customers__title {
   font-size: 42px;
   line-height: 1.17;
+  text-align: start;
   margin-bottom: 20px;
 
   @include mq(mob-only) {
