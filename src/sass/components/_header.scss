@@ -1,0 +1,40 @@
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__link {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-right: auto;
+}
+
+.mobile-button {
+  border-color: transparent;
+  background-color: transparent;
+  margin-left: auto;
+
+  @include mq(tab) {
+    display: none;
+  }
+
+  @include mq(desk) {
+    display: none;
+  }
+}
+
+.nav__list {
+  display: flex;
+  gap: 28px;
+  margin-right: 28px;
+  @include mq(mob-only) {
+    display: none;
+  }
+}
+
+.btn {
+  @include mq(mob-only) {
+    display: none;
+  }
+}
