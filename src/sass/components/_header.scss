@@ -33,7 +33,7 @@
   }
 }
 
-.btn {
+.nav__btn {
   @include mq(mob-only) {
     display: none;
   }
