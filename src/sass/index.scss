@@ -1,19 +1,15 @@
-// @import './common';
-// @import './example';
-
-
 @import './common';
 
 @import './utils/reset';
-
-@import './main-styles';
-// @import './utils/main-styles';
-
 @import './utils/variables';
 @import './utils/mixins';
+@import './utils/placeholders';
+@import './utils/main-styles';
 
-
-// @import './example';
-
-
-@import './components/customers-say';
+@import './components/base';
+@import './components/header';
+@import './components/hero';
+@import './components/offerings';
+@import './components/favorites';
+@import './components/subscribe';
+@import './components/footer';
