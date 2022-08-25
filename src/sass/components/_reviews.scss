@@ -1,4 +1,6 @@
 .customers {
+  @include section;
+
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
@@ -23,6 +25,7 @@
 }
 
 .customers__container {
+  @include container;
   @include mq(mob-only) {
     padding-left: 20px;
     padding-right: 20px;
