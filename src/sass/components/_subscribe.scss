@@ -7,10 +7,21 @@
     }
   }
 
+  &__text-wrapper {
+    @include mq(tab) {
+      align-items: start;
+    }
+  }
+
   &__title {
     margin-bottom: 20px;
+
+    @include mq(tab) {
+      font-size: 42px;
+      text-align: start;
+    }
   }
-  
+
   &__text {
     margin-bottom: 24px;
     max-width: 656px;
