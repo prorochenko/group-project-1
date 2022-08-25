@@ -1,9 +1,11 @@
 .hero {
+  @extend %section;
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
 
   &__container {
+    @extend %container;
     justify-content: space-between;
     display: flex;
     @include mq(mob-only) {
@@ -18,8 +20,6 @@
   }
 
   &__title {
-    font-weight: 700;
-
     @include mq(mob-only) {
       min-width: 280px;
       max-width: 537px;
@@ -36,9 +36,10 @@
       line-height: 120%;
     }
     @include mq(desk) {
-      font-size: 48px;
       margin-top: 159px;
       margin-bottom: 28px;
+      font-size: 48px;
+      line-height: 1.2;
     }
   }
   &__text {
@@ -55,7 +56,8 @@
       max-width: 336px;
     }
   }
-  & .btn {
+  &__btn {
+    @extend %btn;
     height: 32px;
     border-radius: 30px;
   }
