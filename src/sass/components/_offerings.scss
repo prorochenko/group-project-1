@@ -1,0 +1,82 @@
+.offerings {
+    background-image: url(../images/svg/offering-desk.svg);
+    // background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.offerings__container {
+    display: flex;
+}
+
+.offerings__img {
+    margin-right: 90px;
+    margin-top: 177px;
+}
+
+.offerings__box {
+    max-width: 573px;
+}
+
+.offerings__title {
+    margin-top: 260px;
+    margin-bottom: 20px;
+   
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.2;
+}
+
+.offerings__text--main {
+    margin-bottom: 40px;
+}
+
+.offerings__list {
+    margin-bottom: 32px;
+
+    display: flex;
+    gap: 67px;
+}
+
+.offerings__item {
+    position: relative;
+}
+
+.offerings__subtitle {
+    margin-bottom: 16px;
+
+    font-weight: 700;
+    font-size: 17.0833px;
+    line-height: 1.4;
+}
+
+// .offerings__subtitle--fast{
+//     &::before {
+//         content: "";
+//         display: block;
+//         position: absolute;
+//         background-image: url('../images/offerings/deliv.svg');
+//     }
+// }
+
+// .offerings__subtitle--easy {
+//     &::before {
+//         content: "";
+//         display: block;
+//         position: absolute;
+//         background-image: url('../images/offerings/order.svg');
+//     }
+// }
+
+.offerings__text {
+    font-size: 14px;
+}
+
+.offerings__btn {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    background: var(--white-bg-cl);
+    border: 2px solid var(--border-btn-cl);
+}
