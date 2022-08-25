@@ -1,42 +1,34 @@
 .hero {
   @extend %section;
-  max-width: 1280px;
-  margin-left: auto;
-  margin-right: auto;
-
+  position: relative;
+  @include mq(tab) {
+    padding-top: 60px;
+  }
   &__container {
     @extend %container;
     justify-content: space-between;
     display: flex;
-    @include mq(mob-only) {
-      padding: 0 20px;
-    }
-    @include mq(tab) {
-      padding: 0 32px;
-    }
-    @include mq(desk) {
-      padding: 0 16px;
-    }
   }
 
   &__title {
+    margin: 0;
     @include mq(mob-only) {
       min-width: 280px;
       max-width: 537px;
-      margin-top: 60px;
+      //   margin-top: 60px;
       margin-bottom: 28px;
       font-size: 28px;
       line-height: 1.18;
     }
     @include mq(tab) {
-      margin-top: 60px;
+      //   margin-top: 60px;
       max-width: 537px;
       margin-bottom: 44px;
       font-size: 42px;
       line-height: 120%;
     }
     @include mq(desk) {
-      margin-top: 159px;
+      margin-top: 59px;
       margin-bottom: 28px;
       font-size: 48px;
       line-height: 1.2;
@@ -63,35 +55,29 @@
   }
 
   // slider
+
   &__right-side {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
     @include mq(mob-only) {
       display: none;
     }
     @include mq(tab) {
+      width: 336px;
+      height: 320px;
+      top: 70px;
+      right: 40px;
       display: block;
     }
-  }
-}
-
-.slider-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-
-  position: absolute;
-
-  @include mq(tab) {
-    width: 336px;
-    height: 320px;
-    top: 149px;
-    right: 32px;
-  }
-  @include mq(desk) {
-    width: 528px;
-    height: 528px;
-    top: 0px;
-    right: 0px;
+    @include mq(desk) {
+      width: 608px;
+      height: 580px;
+      top: 50px;
+      right: 60px;
+    }
   }
 }
 
@@ -133,7 +119,8 @@
   font-size: 40px;
   font-weight: bold;
   font-family: sans-serif;
-
+  position: relative;
+  z-index: 3;
   border-radius: 50%;
 
   @include mq(tab) {
