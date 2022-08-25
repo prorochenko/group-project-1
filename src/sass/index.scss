@@ -1,2 +1,19 @@
+// @import './common';
+// @import './example';
+
+
 @import './common';
-@import './example';
+
+@import './utils/reset';
+
+@import './main-styles';
+// @import './utils/main-styles';
+
+@import './utils/variables';
+@import './utils/mixins';
+
+
+// @import './example';
+
+
+@import './components/customers-say';
