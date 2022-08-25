@@ -6,22 +6,17 @@
   }
   &__container {
     @extend %container;
-    justify-content: space-between;
-    display: flex;
   }
 
   &__title {
     margin: 0;
     @include mq(mob-only) {
-      min-width: 280px;
-      max-width: 537px;
-      //   margin-top: 60px;
-      margin-bottom: 28px;
+      max-width: 280px;
+      margin: 0 0 28px 0;
       font-size: 28px;
       line-height: 1.18;
     }
     @include mq(tab) {
-      //   margin-top: 60px;
       max-width: 537px;
       margin-bottom: 44px;
       font-size: 42px;
