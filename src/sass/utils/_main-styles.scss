@@ -4,7 +4,7 @@ body {
   font-style: normal;
   font-size: 16px;
   line-height: 1.5;
-  color: #2c2c2c;
+  color: var(--main-txt-cl);
   max-width: 100%;
 }
 
@@ -83,15 +83,15 @@ img {
   height: 42px;
   padding: 6px 17px 5px 16px;
 
-  border: 1px solid #bbf330;
+  border: 1px solid var(--accent-txt-cl);
   border-radius: 30px;
-  background-color: #bbf330;
+  background-color: var(--accent-txt-cl);
   cursor: pointer;
 }
 
 .input {
   height: 42px;
-  border: 1px solid #ffe550;
+  border: 1px solid var(--yellow-btn-bg-hover-cl);
   border-radius: 30px;
   padding: 12px 11px;
 }
@@ -99,7 +99,7 @@ img {
 .input::placeholder {
   font-size: 12px;
   line-height: 1.5;
-  color: #505050;
+  color: var(--placeholder-txt-cl);
 
   padding: 12px 11px;
 }
