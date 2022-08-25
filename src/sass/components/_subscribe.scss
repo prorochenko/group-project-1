@@ -72,6 +72,7 @@
 
   @include mq(desk) {
     margin: 0 auto;
+
     min-width: 546px;
   }
 }
