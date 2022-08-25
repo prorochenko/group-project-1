@@ -1,38 +1,79 @@
-.subscribe__btn {
-  height: 42px;
-}
-.subscribe__input {
-  width: 394px;
-  margin-right: 32px;
-}
-
-.subscribe__input::placeholder {
-  font-size: 12px;
-  line-height: 1.5;
-  color: #505050;
-}
-.subscribe__title {
-  margin-bottom: 20px;
-}
-
-.subscribe__text {
-  margin-bottom: 24px;
-  width: 656px;
-}
-
-.subscribe__btn {
-  width: 106px;
-}
-
-.subscribe__btn:is(:hover, :focus) {
-  background-color: #fff;
-}
-
 .subscribe {
-  display: flex;
-  align-items: center;
-}
+  padding-top: 50px;
+  &__wrapper {
+    display: flex;
+    @include mq(not-desk) {
+      flex-direction: column;
+    }
+  }
 
-.subscribe__img {
-  margin: 0 auto;
+  &__title {
+    margin-bottom: 20px;
+  }
+  
+  &__text {
+    margin-bottom: 24px;
+    max-width: 656px;
+  }
+
+  &__input {
+    width: 394px;
+    margin-right: 32px;
+
+    @include mq(mob-only) {
+      display: block;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__input::placeholder {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #505050;
+  }
+
+  &__btn {
+    height: 42px;
+    width: 106px;
+
+    &:is(:hover, :focus) {
+      background-color: #fff;
+    }
+    @include mq(mob-only) {
+      display: block;
+      margin-left: auto;
+    }
+  }
+
+  &__picture {
+    @include mq(not-desk) {
+      order: -1;
+    }
+
+    @include mq(mob-only) {
+      margin: 0 auto;
+      margin-bottom: 17px;
+    }
+
+    @include mq(tab) {
+      margin-bottom: 20px;
+      margin-left: auto;
+    }
+  }
+
+  &__img {
+    @include mq(mob-only) {
+      min-width: 161px;
+    }
+
+    @include mq(tab) {
+      min-width: 281px;
+    }
+
+    @include mq(desk) {
+      margin: 0 auto;
+      min-width: 546px;
+    }
+  }
 }

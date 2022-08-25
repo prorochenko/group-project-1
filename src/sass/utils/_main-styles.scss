@@ -4,7 +4,7 @@ body {
   font-style: normal;
   font-size: 16px;
   line-height: 1.5;
-  color: #2c2c2c;
+  color: var(--main-txt-cl);
   max-width: 100%;
 }
 
@@ -45,13 +45,28 @@ img {
   padding-top: 100px;
   padding-bottom: 100px;
 }
-
+  
 .container {
-  width: 1280px;
-  padding-left: 16px;
-  padding-right: 16px;
-  margin-left: auto;
-  margin-right: auto;
+  outline: 2px solid red;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include mq(mob) {
+      width: 480px;
+  }
+
+  @include mq(tab) {
+      width: 768px;
+      padding-left: 32px;
+      padding-right: 32px;
+  }
+
+  @include mq(desk){
+      width: 1280px;
+      padding-left: 16px;
+      padding-right: 16px;
+  }
 }
 
 .section__title {
@@ -69,15 +84,15 @@ img {
   height: 42px;
   padding: 6px 17px 5px 16px;
 
-  border: 1px solid #bbf330;
+  border: 1px solid var(--accent-txt-cl);
   border-radius: 30px;
-  background-color: #bbf330;
+  background-color: var(--accent-txt-cl);
   cursor: pointer;
 }
 
 .input {
   height: 42px;
-  border: 1px solid #ffe550;
+  border: 1px solid var(--yellow-btn-bg-hover-cl);
   border-radius: 30px;
   padding: 12px 11px;
 }
@@ -85,5 +100,7 @@ img {
 .input::placeholder {
   font-size: 12px;
   line-height: 1.5;
-  color: #505050;
+  color: var(--placeholder-txt-cl);
+
+  padding: 12px 11px;
 }
