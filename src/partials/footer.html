@@ -1,37 +1,54 @@
 <footer class="footer">
   <div class="footer__container container">
-    <a class="footer__link" href="./index.html">
-      <svg class="footer__logo" width="71" height="52">
-        <use href="./images/symbol-defs.svg#icon-logo"></use>
-      </svg>
-    </a>
-    <ul class="footer__list">
-      <li class="footer__item">Home</li>
-      <li class="footer__item">About</li>
-      <li class="footer__item">Service</li>
-      <li class="footer__item">Menu</li>
-      <li class="footer__item">Contact</li>
-    </ul>
-    <p class="footer__subscribe-text">Subscribe</p>
-    <form class="footer__subscribe-form">
-      <label class="footer__subscribe-label">
-        <input
-          type="email"
-          name="subscribe-name"
-          placeholder="Enter your email"
-        />
-      </label>
-    </form>
-    <button type="button">Subscribe</button>
-    <p>By subscribing you agree to with our <span>Privacy Policy</span></p>
+    <div class="footer__block">
+      <div class="footer__menu">
+        <a class="footer__link" href="./index.html">
+          <svg class="footer__logo" width="71" height="52">
+            <use href="./images/symbol-defs.svg#icon-logo"></use>
+          </svg>
+        </a>
+        <ul class="footer__list">
+          <li class="footer__item">Home</li>
+          <li class="footer__item">About</li>
+          <li class="footer__item">Service</li>
+          <li class="footer__item">Menu</li>
+          <li class="footer__item">Contact</li>
+        </ul>
+      </div>
 
-    <div>
-      <ul>
-        <li>Privacy Policy</li>
-        <li>Terms of Service</li>
-        <li>Cookies Settings</li>
+      <form class="footer__subscribe-form">
+        <h3 class="footer__subscribe-text">Subscribe</h3>
+
+        <label class="footer__subscribe-label">
+          <input
+            class="footer__subscribe-input"
+            type="email"
+            name="subscribe-name"
+            placeholder="Enter your email"
+            required
+          />
+          <span class="footer__subscribe-warning">
+            <svg class="footer__subscribe-icon" width="11" height="11">
+              <use href="./images/symbol-defs.svg#icon-frame"></use>
+            </svg>
+            Not a valid email address (example@email.com)
+          </span>
+          <button class="footer__button btn" type="button">Subscribe</button>
+          <p class="footer__desc">
+            By subscribing you agree to with our
+            <a class="footer__desc-link" href="">Privacy Policy</a>
+          </p>
+        </label>
+      </form>
+    </div>
+
+    <div class="footer__flex">
+      <ul class="footer__flex-list">
+        <li class="footer__flex-item">Privacy Policy</li>
+        <li class="footer__flex-item">Terms of Service</li>
+        <li class="footer__flex-item">Cookies Settings</li>
       </ul>
-      <p>2022 FoodSta. All right reserved.</p>
+      <p class="footer__flex-text">2022 FoodSta. All right reserved.</p>
     </div>
   </div>
 </footer>
