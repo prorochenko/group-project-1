@@ -1,0 +1,26 @@
+.hero {
+  &__container {
+    @include mq(mob-only) {
+    }
+    @include mq(tab) {
+      // position: relative;
+      display: flex;
+    }
+  }
+  &__left-side {
+    width: 502px;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120%;
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 150%;
+  }
+  & .btn {
+    height: 32px;
+    border-radius: 30px;
+  }
+}
