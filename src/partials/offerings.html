@@ -1,44 +1,46 @@
-<section class="offerngs container">
-    <picture class="offerngs__img"> 
-        <source
-          media="(min-width: 1280px)"
-          srcset="
-            ./images/offerings/apple_desk@1x.png 1x,
-            ./images/offerings/apple_desk@2x.png 2x"
-          />
-        <source
-          media="(min-width: 768px)"
-          srcset="
-            ./images/offerings/apple_tab@1x.png 1x,
-            ./images/offerings/apple_tab@2x.png 2x"
+<section class="offerings">
+  <div class="offerings__container container">
+    <picture class="offerings__img"> 
+      <source
+        media="(min-width: 1280px)"
+        srcset="
+          ./images/offerings/apple_desk@1x.png 1x,
+          ./images/offerings/apple_desk@2x.png 2x"
         />
-        <source
-          media="(max-width: 767px)"
-          srcset="
-            ./images/offerings/apple_mob@1x.png 1x,
-            ./images/offerings/apple_mob@2x.png 2x"
-        />
-        <img 
-          src="./images/offerings/apple_mob@1x.png"
-          alt=""
-          width=""
-          height=""
-          loading="lazy"
-        />
-      </picture>
-    <div class="offerngs__box">
-        <h2 class="offerngs__title">What’s Special About Our Offerings</h2>
-        <p class="offerngs__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
-        <ul class="offerngs__list">
-            <li class="offerngs__item">
-                <h3 class="offerngs__subtitle">Fasest Delivery</h3>
-                <p class="offerngs__">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+      <source
+        media="(min-width: 768px)"
+        srcset="
+          ./images/offerings/apple_tab@1x.png 1x,
+          ./images/offerings/apple_tab@2x.png 2x"
+      />
+      <source
+        media="(max-width: 767px)"
+        srcset="
+          ./images/offerings/apple_mob@1x.png 1x,
+          ./images/offerings/apple_mob@2x.png 2x"
+      />
+      <img 
+        src="./images/offerings/apple_mob@1x.png"
+        alt="apple"
+        width=""
+        height=""
+        loading="lazy"
+      />
+    </picture>
+    <div class="offerings__box">
+        <h2 class="offerings__title">What’s Special About Our Offerings</h2>
+        <p class="offerings__text--main">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+        <ul class="offerings__list">
+            <li class="offerings__item">
+                <h3 class="offerings__subtitle offerings__subtitle--fast">Fasest Delivery</h3>
+                <p class="offerings__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
             </li>
             <li>
-                <h3 class="offerngs__subtitle">Easy To Order</h3>
-                <p class="offerngs__">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                <h3 class="offerings__subtitle offerings__subtitle--easy">Easy To Order</h3>
+                <p class="offerings__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
             </li>
         </ul>
-        <button class="offerngs__btn" type="button">Order Now</button>
+        <button class="offerings__btn btn" type="button">Order Now</button>
     </div>
+  </div>
 </section>
