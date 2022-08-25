@@ -16,29 +16,139 @@
     <div class="slider">
       <div class="slides">
         <div id="slides__1" class="slide">
-          <img
-            class="slide__img"
-            src="./images/hero/img_desk-002@1x.png"
-            style="width: 100%"
-          />
+          <picture>
+            <source
+              srcset="
+                ./images/hero/img_desk_001@1x.webp 1x,
+                ./images/hero/img_desk_001@2x.webp 2x
+              "
+              type="image/webp"
+              media="(min-width: 1280px)"
+            />
+            <source
+              srcset="
+                ./images/hero/img_desk_001@1x.png 1x,
+                ./images/hero/img_desk_001@2x.png 2x
+              "
+              type="image/png"
+              media="(min-width: 1280px)"
+            />
+            <source
+              srcset="
+                ./images/hero/img_tab_001@1x.webp 1x,
+                ./images/hero/img_tab_001@2x.webp 2x
+              "
+              type="image/webp"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="
+                ./images/hero/img_tab_001@1x.png 1x,
+                ./images/hero/img_tab_001@2x.png 2x
+              "
+              type="image/png"
+              media="(min-width: 768px)"
+            />
+
+            <img
+              class="slide__img"
+              src="./images/hero/img_desk_001@1x.png"
+              alt="falafel with herbs"
+              style="width: 100%"
+              loading="lazy"
+            />
+          </picture>
           <a class="slide__prev" href="#slides__3" title="Next"></a>
           <a class="slide__next" href="#slides__2" title="Next"></a>
         </div>
         <div id="slides__2" class="slide">
-          <img
-            class="slide__img"
-            src="./images/hero/img_desk_001@1x.png"
-            style="width: 100%"
-          />
+          <picture>
+            <source
+              srcset="
+                ./images/hero/img_desk-002@1x.webp 1x,
+                ./images/hero/img_desk-002@2x.webp 2x
+              "
+              type="image/webp"
+              media="(min-width: 1280px)"
+            />
+            <source
+              srcset="
+                ./images/hero/img_desk-002@1x.png 1x,
+                ./images/hero/img_desk-002@2x.png 2x
+              "
+              type="image/png"
+              media="(min-width: 1280px)"
+            />
+            <source
+              srcset="
+                ./images/hero/img_tab_002@1x.webp 1x,
+                ./images/hero/img_tab_002@2x.webp 2x
+              "
+              type="image/webp"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="
+                ./images/hero/img_tab_002@1x.png 1x,
+                ./images/hero/img_tab_002@2x.png 2x
+              "
+              type="image/png"
+              media="(min-width: 768px)"
+            />
+            <img
+              class="slide__img"
+              src="./images/hero/img_desk-002@1x.png"
+              alt="falafel with herbs"
+              style="width: 100%"
+              loading="lazy"
+            />
+          </picture>
           <a class="slide__prev" href="#slides__1" title="Prev"></a>
           <a class="slide__next" href="#slides__3" title="Next"></a>
         </div>
         <div id="slides__3" class="slide">
-          <img
-            class="slide__img"
-            src="./images/hero/img_desk_003@1x.png"
-            style="width: 100%"
-          />
+          <picture>
+            <source
+              srcset="
+                ./images/hero/img_desk_003@1x.webp 1x,
+                ./images/hero/img_desk_003@2x.webp 2x
+              "
+              type="image/webp"
+              media="(min-width: 1280px)"
+            />
+            <source
+              srcset="
+                ./images/hero/img_desk_003@1x.png 1x,
+                ./images/hero/img_desk_003@2x.png 2x
+              "
+              type="image/png"
+              media="(min-width: 1280px)"
+            />
+            <source
+              srcset="
+                ./images/hero/img_tab_003@1x.webp 1x,
+                ./images/hero/img_tab_003@2x.webp 2x
+              "
+              type="image/webp"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="
+                ./images/hero/img_tab_003@1x.png 1x,
+                ./images/hero/img_tab_003@2x.png 2x
+              "
+              type="image/png"
+              media="(min-width: 768px)"
+            />
+
+            <img
+              class="slide__img"
+              src="./images/hero/img_desk_003@1x.png"
+              alt="falafel with herbs"
+              style="width: 100%"
+              loading="lazy"
+            />
+          </picture>
           <a class="slide__prev" href="#slides__2" title="Prev"></a>
           <a class="slide__next" href="#slides__1" title="Next"></a>
         </div>
