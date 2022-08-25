@@ -1,0 +1,38 @@
+.subscribe__btn {
+  height: 42px;
+}
+.subscribe__input {
+  width: 394px;
+  margin-right: 32px;
+}
+
+.subscribe__input::placeholder {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #505050;
+}
+.subscribe__title {
+  margin-bottom: 20px;
+}
+
+.subscribe__text {
+  margin-bottom: 24px;
+  width: 656px;
+}
+
+.subscribe__btn {
+  width: 106px;
+}
+
+.subscribe__btn:is(:hover, :focus) {
+  background-color: #fff;
+}
+
+.subscribe {
+  display: flex;
+  align-items: center;
+}
+
+.subscribe__img {
+  margin: 0 auto;
+}
