@@ -4,6 +4,13 @@
 .subscribe__input {
   width: 394px;
   margin-right: 32px;
+
+  @include mq(mob-only) {
+    display: block;
+    width: 100%;
+
+    margin-bottom: 20px;
+  }
 }
 
 .subscribe__input::placeholder {
@@ -19,20 +26,52 @@
   margin-bottom: 24px;
   width: 656px;
 }
-
 .subscribe__btn {
   width: 106px;
+
+  &:is(:hover, :focus) {
+    background-color: #fff;
+  }
+  @include mq(mob-only) {
+    display: block;
+    margin-left: auto;
+  }
 }
 
-.subscribe__btn:is(:hover, :focus) {
-  background-color: #fff;
-}
-
-.subscribe {
+.subscribe__wrapper {
   display: flex;
-  align-items: center;
+  @include mq(not-desk) {
+    flex-direction: column;
+  }
+}
+
+.subscribe__picture {
+  @include mq(not-desk) {
+    order: -1;
+  }
+
+  @include mq(mob-only) {
+    margin: 0 auto;
+    margin-bottom: 17px;
+  }
+
+  @include mq(tab) {
+    margin-bottom: 20px;
+    margin-left: auto;
+  }
 }
 
 .subscribe__img {
-  margin: 0 auto;
+  @include mq(mob-only) {
+    min-width: 161px;
+  }
+
+  @include mq(tab) {
+    min-width: 281px;
+  }
+
+  @include mq(desk) {
+    margin: 0 auto;
+    min-width: 546px;
+  }
 }
