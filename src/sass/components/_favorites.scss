@@ -1,5 +1,6 @@
 .favorites {
-    @include section;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .section__title {
@@ -31,10 +32,33 @@
 }
 
 .favorites__item {
+    max-width: 280px;
+    border: 11px solid var(--yellow-bg-cl);
+    border-radius: 139.658px;
+    padding: 18px 17px;
+
+    &:nth-last-child(-n+3) {
+            display: none;
+        }
+        
+    @include mq(tab) {
+        max-width: 336px;
+        border: 14px solid var(--yellow-bg-cl);
+        border-radius: 167.59px;
+        padding: 21px 20px;
+
+        &:nth-last-child(-n+3) {
+                display: block;
+            }
+    }
+
+    @include mq(desk) {
         max-width: 395px;
         border: 16px solid var(--yellow-bg-cl);
         border-radius: 197.5px;
         padding: 25px 24px;
+    }
+
     &:hover,
     &:focus {
         border-color: var(--green-btn-bg-cl);
