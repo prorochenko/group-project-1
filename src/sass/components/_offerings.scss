@@ -162,8 +162,12 @@
     background-color: var(--white-bg-cl);
     border: 2px solid var(--border-btn-cl);
 
+    transition: background-color 300ms ease-in;
+
+
     &:hover, &:focus {
         background-color: var(--border-btn-cl);
+        transform: scale(1.2);
     }
 }
 

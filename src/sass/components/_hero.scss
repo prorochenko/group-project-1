@@ -52,10 +52,13 @@
     @extend %btn;
     height: 32px;
     border-radius: 30px;
+
+    transition: background-color 300ms ease-in;
   }
   &__btn:hover,
   &__btn:focus {
     background-color: var(--green-btn-bg-hover-cl);
+    transform: scale(1.2);
   }
 }
 // slider
