@@ -51,6 +51,7 @@
 }
 // slider new
 .hero__slider {
+  outline: 1px solid red;
   @include mq(mob-only) {
     display: none;
   }
@@ -81,8 +82,11 @@
 .item {
   flex-shrink: 0;
   width: 100%;
-  outline: 1px solid red;
   background-color: transparent;
+}
+.slide__img {
+  border-radius: 50%;
+  border: 26px solid #ffe550;
 }
 
 .hero__buttons {
