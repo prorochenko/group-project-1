@@ -73,6 +73,8 @@
         }
     }
 
+    transition: border-color 300ms ease;
+
     &:hover,
     &:focus {
         border-color: var(--green-btn-bg-cl);
