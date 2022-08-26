@@ -17,14 +17,30 @@
   }
 
   @include mq(tab) {
+    background-position: left 197px bottom, left bottom, left 136px bottom,
+      left 314px bottom, left 503px bottom, right -86px bottom, right top, right;
     background-image: url(../images/footer/footer_tab-3@1x.png),
       url(../images/footer/footer_tab-1@1x.png),
       url(../images/footer/footer_tab-2@1x.png),
       url(../images/footer/footer_tab-4@1x.png),
       url(../images/footer/footer_tab-5@1x.png),
-      url(../images/footer/footer_tab-6@1x.png);
-    background-position: left 197px bottom, left bottom, left 136px bottom,
-      left 314px bottom, left 503px bottom, right -86px bottom;
+      url(../images/footer/footer_tab-6@1x.png),
+      url(../images/footer/drops-tab@1x.png),
+      url(../images/footer/orange-tab@1x.png);
+  }
+  @include mq(retina) {
+    background-image: url(../images/footer/footer_tab-3@2x.png),
+      url(../images/footer/footer_tab-1@2x.png),
+      url(../images/footer/footer_tab-2@2x.png),
+      url(../images/footer/footer_tab-4@2x.png),
+      url(../images/footer/footer_tab-5@2x.png),
+      url(../images/footer/footer_tab-6@2x.png),
+      url(../images/footer/drops-tab@2x.png),
+      url(../images/footer/orange-tab@2x.png);
+  }
+  @include mq(desk) {
+    background-image: url(../images/footer/fruit-futer-desk@1x.png);
+    background-position: bottom left 69px;
   }
 }
 
