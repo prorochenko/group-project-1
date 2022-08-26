@@ -1,26 +1,191 @@
 .hero {
+  @extend %section;
+  position: relative;
+  @include mq(tab) {
+    padding-top: 60px;
+  }
   &__container {
+    @extend %container;
+    justify-content: space-between;
+    display: flex;
+  }
+
+  &__title {
+    margin: 0;
     @include mq(mob-only) {
+      min-width: 280px;
+      max-width: 537px;
+      //   margin-top: 60px;
+      margin-bottom: 28px;
+      font-size: 28px;
+      line-height: 1.18;
     }
     @include mq(tab) {
-      // position: relative;
-      display: flex;
+      //   margin-top: 60px;
+      max-width: 537px;
+      margin-bottom: 44px;
+      font-size: 42px;
+      line-height: 120%;
+    }
+    @include mq(desk) {
+      margin-top: 59px;
+      margin-bottom: 28px;
+      font-size: 48px;
+      line-height: 1.2;
     }
   }
-  &__left-side {
-    width: 502px;
-  }
-  &__title {
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 120%;
-  }
   &__text {
-    font-size: 16px;
-    line-height: 150%;
+    @include mq(mob-only) {
+      font-size: 14px;
+      line-height: 150%;
+      margin-bottom: 28px;
+      max-width: 266px;
+    }
+    @include mq(tab) {
+      font-size: 16px;
+      line-height: 150%;
+      margin-bottom: 40px;
+      max-width: 336px;
+    }
   }
-  & .btn {
+  &__btn {
+    @extend %btn;
     height: 32px;
     border-radius: 30px;
   }
+
+  // slider
+
+  &__right-side {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    @include mq(mob-only) {
+      display: none;
+    }
+    @include mq(tab) {
+      width: 336px;
+      height: 320px;
+      top: 70px;
+      right: 40px;
+      display: block;
+    }
+    @include mq(desk) {
+      width: 608px;
+      height: 580px;
+      top: 50px;
+      right: 60px;
+    }
+  }
+}
+
+.slider {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  margin: 20px;
+  text-align: center;
+  border-radius: 20px;
+  position: relative;
+  // Removing the scrollbar with CSS
+  overflow: hidden;
+}
+.slides {
+  display: flex;
+  overflow-x: scroll;
+  position: relative;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 100%;
+  height: 400px;
+  margin-right: 0px;
+  box-sizing: border-box;
+  background: transparent;
+  transform-origin: center center;
+  transform: scale(1);
+  scroll-snap-align: center;
+}
+
+.slide__img {
+  font-size: 40px;
+  font-weight: bold;
+  font-family: sans-serif;
+  position: relative;
+  z-index: 3;
+  border-radius: 50%;
+
+  @include mq(tab) {
+    border: 14px solid #ffe550;
+  }
+  @include mq(desk) {
+    border: 26px solid #ffe550;
+  }
+}
+
+.slide a {
+  position: absolute;
+  top: 48%;
+  width: 35px;
+  height: 35px;
+  border: solid black;
+  border-width: 0 4px 4px 0;
+  padding: 3px;
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+}
+
+a.slide__prev {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  left: 5%;
+}
+a.slide__next {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  right: 5%;
+}
+
+a.slide__prev,
+.slider::before {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  left: 5%;
+}
+
+a.slide__next,
+.slider::after {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  right: 5%;
+}
+
+.slider::before,
+.slider::after,
+.slide__prev,
+.slide__next {
+  position: absolute;
+  top: 48%;
+  width: 35px;
+  height: 35px;
+  border: solid yellow;
+  border-width: 0 4px 4px 0;
+  padding: 3px;
+  box-sizing: border-box;
+}
+
+.slider::before,
+.slider::after {
+  content: '';
+  background: transparent;
+  pointer-events: none;
 }

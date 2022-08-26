@@ -1,2 +1,15 @@
 @import './common';
-@import './example';
+@import './utils/reset';
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/placeholders';
+@import './utils/main-styles';
+
+@import './components/base';
+@import './components/header';
+@import './components/hero';
+@import './components/offerings';
+@import './components/favorites';
+@import './components/reviews';
+@import './components/subscribe';
+@import './components/footer';
