@@ -129,6 +129,8 @@
     height: 42px;
     width: 106px;
 
+    transition: background-color 300ms ease-in;
+
     &:is(:hover, :focus) {
       background-color: #fff;
     }

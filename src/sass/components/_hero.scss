@@ -58,8 +58,20 @@
   &__btn:hover,
   &__btn:focus {
     background-color: var(--green-btn-bg-hover-cl);
-    transform: scale(1.2);
+    animation-name: push;
+    animation-duration: 300ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
   }
+    @keyframes push {
+      50% {
+        transform: scale(.8);
+      }
+  
+      100% {
+        transform: scale(1);
+      }
+    }
 }
 // slider
 .slider {
