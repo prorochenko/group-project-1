@@ -1,7 +1,7 @@
 function newSlider(slider) {
-  const btnPrev = slider.querySelector('.button--prev');
-  const btnNext = slider.querySelector('.button--next');
-  const list = slider.querySelector('.list');
+  const btnPrev = slider.querySelector('.slider__btn--prev');
+  const btnNext = slider.querySelector('.slider__btn--next');
+  const list = slider.querySelector('.slider__list');
 
   const slideCount = list.childElementCount;
 

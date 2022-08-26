@@ -4,6 +4,7 @@
 @import './utils/mixins';
 @import './utils/placeholders';
 @import './utils/main-styles';
+@import './utils/visually-hidden';
 
 @import './components/base';
 @import './components/header';
@@ -13,3 +14,4 @@
 @import './components/reviews';
 @import './components/subscribe';
 @import './components/footer';
+@import './components/modal';

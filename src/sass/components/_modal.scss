@@ -1,0 +1,330 @@
+/**
+  |============================
+  | modal -Модальне вікно
+  |============================
+*/
+
+// start --- backdrop  ---start
+
+.backdrop {
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--grey-bg-cl);
+
+  transition: opacity var(--timing-function);
+
+  &--hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+}
+
+// end--- backdrop  ---end
+// .modal__bg {
+//   background-color: var(--border-btn-hover-cl);
+// }
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 40px;
+
+  background-color: var(--border-btn-hover-cl);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  @include mq(mob) {
+    min-width: 310px;
+    min-height: 609px;
+  }
+  @include mq(tab) {
+    min-width: 600px;
+    min-height: 609px;
+  }
+  @include mq(desk) {
+    min-width: 800px;
+    max-width: 800px;
+    min-height: 581px;
+  }
+}
+
+// end --- modal -Модальне вікно --- end
+
+/*  Button to close the modal window ---  Кнопка закриття модального вікна */
+.button-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+
+  color: var(--black-color);
+  background-color: var(--yellow-btn-bg-hover-cl);
+  border: 1px solid var(--border-bth-success);
+  border-radius: 50%;
+
+  &__icon {
+    width: 11px;
+    height: 11px;
+    fill: currentColor;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--border-btn-cl);
+  }
+}
+
+/* end ---  Button to close the modal window ---  Кнопка закриття модального вікна --- end */
+
+/**
+  |============================
+  | register form 
+  |============================
+*/
+
+.register__title {
+  display: block;
+  margin-bottom: 12px;
+
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--main-txt-cl);
+}
+
+.register__form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.register__label {
+  padding-left: 30px;
+
+  font-size: 12px;
+  text-align: start;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+
+.register__icon {
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
+
+  fill: var(--main-txt-cl);
+  transition: fill var(--timing-function);
+}
+
+.register__wrap {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.register__field {
+  @extend %input;
+
+  height: 40px;
+  padding: 12px 42px;
+
+  font-size: 14px;
+  line-height: 16px;
+
+  //   border: 1px solid rgba(33, 33, 33, 0.2);
+  //   border-radius: 4px;
+  outline: transparent;
+
+  transition: border-color var(--timing-function);
+
+  &:focus {
+    border-color: var(--border-btn-cl);
+  }
+
+  &:focus + .register__icon {
+    fill: var(--border-btn-cl);
+  }
+}
+
+.register__message {
+  @extend %input;
+
+  padding: 10px 20px;
+
+  min-width: 245px;
+
+  color: var(--placeholder-txt-cl);
+
+  outline: transparent;
+  resize: none;
+
+  transition: border-color var(--timing-function);
+}
+
+// end --- register form  ---end
+
+/* agreement with the terms of the contract --- погодження з умовами договору  */
+
+.agreement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  margin-bottom: 30px;
+}
+
+.agreement__checkbox:focus + .agreement__icon {
+  outline: 2px solid var(--border-btn-cl);
+  outline-offset: 1px;
+  border-radius: 2px;
+}
+
+.agreement__icon--uncheck {
+  transition: opacity var(--timing-function);
+}
+
+.agreement__checkbox:checked + .agreement__icon > .agreement__icon--uncheck {
+  opacity: 0;
+}
+
+.agreement__icon--check {
+  opacity: 0;
+  fill: var(--border-btn-cl);
+
+  transition: opacity var(--timing-function);
+}
+
+.agreement__checkbox:checked + .agreement__icon > .agreement__icon--check {
+  opacity: 1;
+}
+
+.agreement__text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--main-txt-cl);
+
+  user-select: none;
+
+  @include mq(not-desk) {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+}
+
+.agreement__link {
+  color: var(--border-btn-cl);
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+.agreement__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  padding-left: 52px;
+  padding-right: 52px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// <!-- menu of the restaurant -->
+.menu__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  margin-bottom: 10px;
+}
+
+.menu__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  //   max-width: px;
+
+  @include mq(mob) {
+    min-width: 102px;
+  }
+}
+.menu__label {
+  text-align: center;
+}
+
+.menu__field {
+  @extend %input;
+
+  height: 40px;
+  padding: 12px 20px;
+
+  font-size: 14px;
+  line-height: 16px;
+
+  //   border: 1px solid rgba(33, 33, 33, 0.2);
+  //   border-radius: 4px;
+  outline: transparent;
+
+  transition: border-color var(--timing-function);
+
+  &:focus {
+    border-color: var(--border-btn-cl);
+  }
+
+  &:focus + .register__icon {
+    fill: var(--border-btn-cl);
+  }
+}
+
+.menu__img {
+  max-width: 100px;
+  border: 5px solid var(--yellow-bg-cl);
+  border-radius: 100px;
+  padding: 7px 7px;
+  &:hover,
+  &:focus {
+    border-color: var(--green-btn-bg-cl);
+  }
+
+  @include mq(mob-only) {
+    display: none;
+  }
+}
+/* end --- agreement with the terms of the contract --- погодження з умовами договору --- end  */

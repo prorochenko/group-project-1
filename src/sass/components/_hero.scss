@@ -6,6 +6,7 @@
   }
   &__container {
     @extend %container;
+    position: relative;
   }
 
   &__title {
@@ -23,10 +24,11 @@
       line-height: 120%;
     }
     @include mq(desk) {
-      margin-top: 59px;
+      margin-top: 99px;
       margin-bottom: 28px;
       font-size: 48px;
       line-height: 1.2;
+      max-width: 502px;
     }
   }
   &__text {
@@ -42,6 +44,9 @@
       margin-bottom: 40px;
       max-width: 336px;
     }
+    @include mq(desk) {
+      max-width: 502px;
+    }
   }
   &__btn {
     @extend %btn;
@@ -49,8 +54,9 @@
     border-radius: 30px;
   }
 }
-// slider new
-.hero__slider {
+// slider
+.slider {
+  outline: 1px solid navy;
   @include mq(mob-only) {
     display: none;
   }
@@ -59,7 +65,7 @@
     max-width: 320px;
     max-height: 320px;
     margin: 0 auto;
-    top: 149px;
+    top: 89px;
     right: 32px;
   }
   @include mq(desk) {
@@ -67,190 +73,90 @@
     max-width: 580px;
     max-height: 580px;
     margin: 0 auto;
-    top: 14px;
-    right: 16px;
+    top: -145px;
+    right: 30px;
+  }
+
+  &__list {
+    display: flex;
+    transition: transform 0.3s ease-out;
+  }
+  &__box {
+    overflow: hidden;
+  }
+  &__item {
+    flex-shrink: 0;
+    width: 100%;
+    background-color: transparent;
+  }
+  &__img {
+    border-radius: 50%;
+    @include mq(tab) {
+      border: 14px solid var(--border-yellow-cl);
+    }
+    @include mq(desk) {
+      border: 26px solid var(--border-yellow-cl);
+    }
+  }
+  &__btn {
+    cursor: pointer;
+    background: var(--white-bg-cl);
+    box-shadow: var(--arrow-box-shadow);
+    border-radius: 4px;
+    position: absolute;
+    z-index: 1;
+    top: 146px;
+    border: 0;
+    fill: var(--arrow-bg-cl);
+
+    &--prev {
+      @include mq(tab) {
+        width: 34px;
+        height: 28px;
+        left: -8px;
+        padding: 3.83 13.36 3.83 9.14;
+      }
+      @include mq(desk) {
+        top: 266px;
+        left: -14px;
+        width: 48px;
+        height: 40px;
+        padding: 5.47 18.53 5.47 13.06;
+        border-radius: 8px;
+      }
+    }
+
+    &--next {
+      @include mq(tab) {
+        left: 294px;
+        width: 34px;
+        height: 28px;
+        padding: 3.83 9.14 3.83 13.36;
+      }
+      @include mq(desk) {
+        top: 266px;
+        left: 540px;
+        width: 48px;
+        height: 40px;
+        padding: 5.47 13.06 5.47 18.53;
+        border-radius: 8px;
+      }
+    }
+    &--next:hover,
+    &--next:focus,
+    &--prev:hover,
+    &--prev:focus {
+      fill: var(--arrow-bg-hover-cl);
+    }
+    &--next:active,
+    &--next:active {
+      fill: var(--arrow-bg-cl);
+    }
   }
 }
-.list {
-  display: flex;
-  transition: transform 0.3s ease-out;
-}
-.wrapper {
-  overflow: hidden;
-}
-.item {
-  flex-shrink: 0;
-  width: 100%;
-  outline: 1px solid red;
-  background-color: transparent;
-}
-
-.hero__buttons {
-  position: relative;
-}
-.button--prev {
-  cursor: pointer;
+.slider__icon-next {
   @include mq(tab) {
-    position: absolute;
-    top: 160px;
-    z-index: 4;
-    outline: 1px solid green;
-    background: transparent;
   }
   @include mq(desk) {
-    position: absolute;
-    top: 290px;
-    z-index: 4;
-    outline: 1px solid green;
-    background: transparent;
-    width: 48px;
-    height: 48px;
   }
 }
-.button--next {
-  cursor: pointer;
-  @include mq(tab) {
-    position: absolute;
-    top: 160px;
-    left: 270px;
-    z-index: 3;
-    outline: 1px solid red;
-    background: transparent;
-  }
-  @include mq(desk) {
-    position: absolute;
-    top: 290px;
-    left: 530px;
-    z-index: 3;
-    outline: 1px solid red;
-    background: transparent;
-  }
-}
-
-// slider old
-
-//   &__right-side {
-//     position: absolute;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-
-//     @include mq(mob-only) {
-//       display: none;
-//     }
-//     @include mq(tab) {
-//       width: 320px;
-//       height: 320px;
-//       top: 150px;
-//       right: 40px;
-//       display: block;
-//     }
-//     @include mq(desk) {
-//       width: 580px;
-//       height: 580px;
-//       top: 40px;
-//       right: 90px;
-//     }
-//   }
-// }
-
-// .slider {
-//   text-align: center;
-//   position: relative;
-//   // Removing the scrollbar with CSS
-//   overflow: hidden;
-// }
-// .slides {
-//   display: flex;
-//   overflow-x: scroll;
-//   position: relative;
-//   scroll-behavior: smooth;
-//   scroll-snap-type: x mandatory;
-// }
-
-// .slide {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   flex-shrink: 0;
-//   margin-right: 0px;
-//   box-sizing: border-box;
-//   background: transparent;
-//   transform-origin: center center;
-//   transform: scale(1);
-//   scroll-snap-align: center;
-// }
-
-// .slide__img {
-//   font-size: 40px;
-//   font-weight: bold;
-//   font-family: sans-serif;
-//   position: relative;
-//   border-radius: 50%;
-
-//   @include mq(tab) {
-//     border: 14px solid #ffe550;
-//   }
-//   @include mq(desk) {
-//     border: 26px solid #ffe550;
-//   }
-// }
-
-// .slide a {
-//   position: absolute;
-//   top: 48%;
-//   width: 35px;
-//   height: 35px;
-//   border: solid black;
-//   border-width: 0 4px 4px 0;
-//   padding: 3px;
-//   box-sizing: border-box;
-//   background: transparent;
-//   border: none;
-// }
-
-// a.slide__prev {
-//   transform: rotate(135deg);
-//   -webkit-transform: rotate(135deg);
-//   left: 5%;
-// }
-// a.slide__next {
-//   transform: rotate(-45deg);
-//   -webkit-transform: rotate(-45deg);
-//   right: 5%;
-// }
-
-// a.slide__prev,
-// .slider::before {
-//   transform: rotate(135deg);
-//   -webkit-transform: rotate(135deg);
-//   left: 5%;
-// }
-
-// a.slide__next,
-// .slider::after {
-//   transform: rotate(-45deg);
-//   -webkit-transform: rotate(-45deg);
-//   right: 5%;
-// }
-
-// .slider::before,
-// .slider::after,
-// .slide__prev,
-// .slide__next {
-//   position: absolute;
-//   top: 48%;
-//   width: 35px;
-//   height: 35px;
-//   border: solid yellow;
-//   border-width: 0 4px 4px 0;
-//   padding: 3px;
-//   box-sizing: border-box;
-// }
-
-// .slider::before,
-// .slider::after {
-//   content: '';
-//   background: transparent;
-//   pointer-events: none;
-// }
