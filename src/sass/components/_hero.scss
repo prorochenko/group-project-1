@@ -6,6 +6,7 @@
   }
   &__container {
     @extend %container;
+    position: relative;
   }
 
   &__title {
@@ -23,10 +24,11 @@
       line-height: 120%;
     }
     @include mq(desk) {
-      margin-top: 59px;
+      margin-top: 99px;
       margin-bottom: 28px;
       font-size: 48px;
       line-height: 1.2;
+      max-width: 502px;
     }
   }
   &__text {
@@ -41,6 +43,9 @@
       line-height: 150%;
       margin-bottom: 40px;
       max-width: 336px;
+    }
+    @include mq(desk) {
+      max-width: 502px;
     }
   }
   &__btn {
@@ -60,7 +65,7 @@
     max-width: 320px;
     max-height: 320px;
     margin: 0 auto;
-    top: 149px;
+    top: 89px;
     right: 32px;
   }
   @include mq(desk) {
@@ -68,8 +73,8 @@
     max-width: 580px;
     max-height: 580px;
     margin: 0 auto;
-    top: 14px;
-    right: 16px;
+    top: -145px;
+    right: 30px;
   }
 }
 .list {
@@ -86,7 +91,12 @@
 }
 .slide__img {
   border-radius: 50%;
-  border: 26px solid #ffe550;
+  @include mq(tab) {
+    border: 14px solid #ffe550;
+  }
+  @include mq(desk) {
+    border: 26px solid #ffe550;
+  }
 }
 
 .hero__buttons {
