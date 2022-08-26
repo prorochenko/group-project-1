@@ -5,10 +5,27 @@
   margin-left: auto;
   margin-right: auto;
 
+  margin-bottom: -96px;
+
+  @include mq(tab) {
+    margin-bottom: -148px;
+  }
+
+  @include mq(desk) {
+    margin-bottom: -143px;
+  }
+
+  padding-bottom: 62px;
+
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
+
   background-image: url(../images/svg/customer-mob.svg);
+
+  @include mq(mob) {
+    padding-bottom: 100px;
+  }
 
   @include mq(mob-only) {
     padding-top: 60px;
@@ -20,6 +37,7 @@
   }
 
   @include mq(desk) {
+    padding-bottom: 213px;
     background-image: url(../images/svg/customer-desk.svg);
   }
 }
@@ -40,6 +58,7 @@
 .customers__title {
   font-size: 42px;
   line-height: 1.17;
+  text-align: start;
   margin-bottom: 20px;
 
   @include mq(mob-only) {
@@ -89,6 +108,9 @@
 
 .customers__item {
   display: block;
+  margin-left: auto;
+  margin-right: auto;
+
   padding: 14px;
   background: #fefefe;
 
@@ -159,7 +181,7 @@
 }
 
 .customers__name {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 13.6667px;
   line-height: 1.5;
 }
