@@ -9,25 +9,37 @@
 
     @include mq(desk){
         background-image: url(../images/svg/offering-desk.svg);
+        background-size: contain;
+        background-position: center;
     }
 }
 
 .offerings__container {
+    padding-top: 41px;
+    padding-bottom: 60px;
+    
     @include mq(tab){
         padding-top: 150px;
         padding-bottom: 100px;
+        margin-top: -140px;
     }
 
     @include mq(desk) {
         display: flex;
+        padding: 0;
+        margin-top: -90px;
     }
 }
 
 .offerings__img {
     display: block;
-    // margin-right: auto;
-    // margin-left: auto;
-    margin-bottom: 60px;
+
+    @include mq(mob-only){
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 60px;
+        width: 280px;
+    }
 
     @include mq(tab) {
         margin-bottom: 60px;
@@ -46,26 +58,43 @@
 
 .offerings__title {
     margin-bottom: 20px;
+
+    @include mq(mob-only) {
+        margin-bottom: 28px;
+    }
    
     font-weight: 700;
-    font-size: 42px;
-    line-height: 1.2;
+    font-size: 28px;
+    line-height: 1.17;
+
+    @include mq(tab){
+        font-size: 42px;
+    }
 
     @include mq(desk) {
         margin-top: 260px;
+        line-height: 1.2;
     }
 }
 
 .offerings__text--main {
     margin-bottom: 40px;
+
+    @include mq(mob-only){
+        font-size: 14px;
+        line-height: 1.14;
+    }
+
+    @include mq(tab-only){
+        line-height: 1.19;
+    }
 }
 
 .offerings__list {
-    display: flex;
-    gap: 67px;
-
     @include mq(tab) {
         margin-bottom: 40px;
+        display: flex;
+        gap: 67px;
     }
 
     @include mq(desk) {
@@ -73,12 +102,10 @@
     }
 }
 
-.offerings__subtitle {
-    margin-bottom: 16px;
-
-    font-weight: 700;
-    font-size: 17.0833px;
-    line-height: 1.4;
+.offerings__item {
+    @include mq(mob-only){
+            margin-bottom: 28px;
+    }
 }
 
 .offerings__item--deliv {
@@ -103,8 +130,28 @@
     }
 }
 
+.offerings__subtitle {
+    margin-bottom: 16px;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.17;
+
+    @include mq(desk){
+        font-size: 17px;
+        line-height: 1.4;
+    }
+}
+
 .offerings__text {
     font-size: 14px;
+    line-height: 1.14;
+
+    font-weight: 400;
+
+    @include mq(desk) {
+        line-height: 1.5;
+    }
 }
 
 .offerings__btn {
@@ -118,7 +165,7 @@
 
 .offerings__list--btn {
     display: flex;
-    gap: 20px;
+    gap: 24px;
     align-items: center;
 }
 
