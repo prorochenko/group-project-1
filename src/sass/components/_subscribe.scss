@@ -7,13 +7,28 @@
     }
   }
 
+  &__text-wrapper {
+    @include mq(tab) {
+      align-items: start;
+    }
+  }
+
   &__title {
     margin-bottom: 20px;
+
+    @include mq(tab) {
+      font-size: 42px;
+      text-align: start;
+    }
   }
-  
+
   &__text {
     margin-bottom: 24px;
     max-width: 656px;
+  }
+
+  &__form {
+    position: relative;
   }
 
   &__input {
@@ -27,10 +42,67 @@
     }
   }
 
+  &__input:focus {
+    outline: 0;
+  }
+
   &__input::placeholder {
     font-size: 12px;
     line-height: 1.5;
     color: #505050;
+  }
+
+  &__input-massage {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    font-size: 10px;
+    line-height: 1.5;
+    color: var(--error-txt-cl);
+  }
+
+  &__input-massage {
+    transition: opacity 250ms linear;
+    position: absolute;
+    top: 46px;
+    left: 0;
+  }
+
+  &__input:valid {
+    border-color: var(--border-bth-success);
+  }
+
+  &__input:valid + &__input-massage {
+    opacity: 0;
+  }
+
+  &__input:not(:focus):invalid + &__input-massage {
+    opacity: 0;
+  }
+
+  &__input:focus + &__input-massage {
+    opacity: 0;
+  }
+
+  &__input:not(:focus):invalid {
+    border-color: var(--border-btn-default);
+  }
+
+  &__input:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: var(--border-bth-error);
+  }
+
+  &__input:invalid:not(:focus):not(:placeholder-shown) + &__input-massage {
+    opacity: 1;
+    transition: 250ms;
+  }
+
+  @include mq(tab) {
+    &__input:invalid:not(:focus):not(:placeholder-shown) + &__input-massage {
+      opacity: 1;
+      transition: 250ms;
+    }
   }
 
   &__btn {
