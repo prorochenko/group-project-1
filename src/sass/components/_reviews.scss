@@ -1,4 +1,6 @@
 .customers {
+  @extend %section;
+
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
@@ -23,6 +25,7 @@
 }
 
 .customers__container {
+  @extend %container;
   @include mq(mob-only) {
     padding-left: 20px;
     padding-right: 20px;
@@ -109,15 +112,26 @@
 }
 
 .customers__rating {
-  display: inline-flex;
-  width: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+
+  width: 103px;
   height: 16px;
 
   margin-bottom: 28px;
+}
 
-  background-image: url(../images/symbol-defs.svg#icon-star);
+.customers__icon {
+  width: 18px;
+  height: 16px;
 
-  background-size: contain;
+  //   width: 50px;
+  //   height: 50px;
+
+  align-items: center;
+  justify-content: center;
 }
 
 .customers__comments {

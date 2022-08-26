@@ -1,17 +1,33 @@
 .offerings {
-    background-image: url(../images/svg/offering-desk.svg);
-    // background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/svg/offering-mob.svg);
     
+    @include mq(tab) {
+        background-image: url(../images/svg/offering-tab.svg);
+    }
+
+    @include mq(desk){
+        background-image: url(../images/svg/offering-desk.svg);
+    }
 }
 
 .offerings__container {
-    display: flex;
+    @include mq(tab){
+        padding-top: 150px;
+    }
+
+    @include mq(desk) {
+        display: flex;
+    }
 }
 
 .offerings__img {
-    margin-right: 90px;
-    margin-top: 177px;
+    @include mq(desk) {
+        margin-right: 90px;
+        margin-top: 177px;
+        margin-bottom: 75px;
+    }
 }
 
 .offerings__box {
@@ -19,12 +35,15 @@
 }
 
 .offerings__title {
-    margin-top: 260px;
     margin-bottom: 20px;
    
     font-weight: 700;
     font-size: 42px;
     line-height: 1.2;
+
+    @include mq(desk) {
+        margin-top: 260px;
+    }
 }
 
 .offerings__text--main {
@@ -38,10 +57,6 @@
     gap: 67px;
 }
 
-.offerings__item {
-    position: relative;
-}
-
 .offerings__subtitle {
     margin-bottom: 16px;
 
@@ -50,23 +65,27 @@
     line-height: 1.4;
 }
 
-// .offerings__subtitle--fast{
-//     &::before {
-//         content: "";
-//         display: block;
-//         position: absolute;
-//         background-image: url('../images/offerings/deliv.svg');
-//     }
-// }
+.offerings__item--deliv {
+    &::before {
+        content: "";
+        margin-bottom: 10px;
+        display: block;
+        width: 48px;
+        height: 48px;
+        background-image: url('../images/offerings/deliv.svg');
+    }
+}
 
-// .offerings__subtitle--easy {
-//     &::before {
-//         content: "";
-//         display: block;
-//         position: absolute;
-//         background-image: url('../images/offerings/order.svg');
-//     }
-// }
+.offerings__item--order {
+    &::before {
+        content: "";
+        margin-bottom: 10px;
+        display: block;
+        width: 48px;
+        height: 48px;
+        background-image: url('../images/offerings/order.svg');
+    }
+}
 
 .offerings__text {
     font-size: 14px;
