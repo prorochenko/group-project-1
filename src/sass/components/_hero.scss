@@ -146,6 +146,14 @@
         border-radius: 8px;
       }
     }
+    @include mq(tab) {
+      &--next:hover,
+      &--next:focus,
+      &--prev:hover,
+      &--prev:focus {
+        fill: var(--arrow-bg-cl);
+      }
+    }
     @include mq(desk) {
       &--next:hover,
       &--next:focus,
