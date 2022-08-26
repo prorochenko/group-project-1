@@ -21,6 +21,26 @@
       text-align: start;
     }
   }
+}
+
+.subscribe__input::placeholder {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #505050;
+}
+.subscribe__title {
+  margin-bottom: 20px;
+}
+
+.subscribe__text {
+  margin-bottom: 24px;
+}
+.subscribe__btn {
+  width: 106px;
+
+  &:is(:hover, :focus) {
+    background-color: #fff;
+  }
 
   &__text {
     margin-bottom: 24px;
