@@ -74,3 +74,24 @@
   color: var(--green-btn-bg-cl);
   text-decoration: underline;
 }
+
+.mob-menu {
+  background-color: var(--white-bg-cl);
+  box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
+  border-radius: 30px 0px 30px 30px;
+  min-width: 130px;
+}
+
+.mob-menu__item {
+  padding-top: 16px;
+  padding-left: 16px;
+  padding-bottom: 16px;
+}
+
+.mob-menu__link {
+  // padding-top: 16px;
+  // padding-left: 16px;
+  // padding-bottom: 16px;
+  line-height: 1.19;
+  color: var(--dark-txt-cl);
+}
