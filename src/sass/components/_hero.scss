@@ -146,11 +146,13 @@
         border-radius: 8px;
       }
     }
-    &--next:hover,
-    &--next:focus,
-    &--prev:hover,
-    &--prev:focus {
-      fill: var(--arrow-bg-hover-cl);
+    @include mq(desk) {
+      &--next:hover,
+      &--next:focus,
+      &--prev:hover,
+      &--prev:focus {
+        fill: var(--arrow-bg-hover-cl);
+      }
     }
     &--next:active,
     &--next:active {
