@@ -5,6 +5,16 @@
   margin-left: auto;
   margin-right: auto;
 
+  margin-bottom: -96px;
+
+  @include mq(tab) {
+    margin-bottom: -148px;
+  }
+
+  @include mq(desk) {
+    margin-bottom: -143px;
+  }
+
   padding-bottom: 62px;
 
   background-repeat: no-repeat;
