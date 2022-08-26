@@ -15,6 +15,7 @@
 .offerings__container {
     @include mq(tab){
         padding-top: 150px;
+        padding-bottom: 100px;
     }
 
     @include mq(desk) {
@@ -23,6 +24,15 @@
 }
 
 .offerings__img {
+    display: block;
+    // margin-right: auto;
+    // margin-left: auto;
+    margin-bottom: 60px;
+
+    @include mq(tab) {
+        margin-bottom: 60px;
+    }
+
     @include mq(desk) {
         margin-right: 90px;
         margin-top: 177px;
@@ -51,10 +61,16 @@
 }
 
 .offerings__list {
-    margin-bottom: 32px;
-
     display: flex;
     gap: 67px;
+
+    @include mq(tab) {
+        margin-bottom: 40px;
+    }
+
+    @include mq(desk) {
+        margin-bottom: 32px;
+    }
 }
 
 .offerings__subtitle {
@@ -98,4 +114,22 @@
     min-height: 40px;
     background: var(--white-bg-cl);
     border: 2px solid var(--border-btn-cl);
+}
+
+.offerings__list--btn {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.offerings__link {
+    display: flex;
+    align-items: center;
+
+    font-size: 14px;
+    color: var(--dark-txt-cl);
+
+    @include mq(desk){
+        display: none;
+    }
 }
