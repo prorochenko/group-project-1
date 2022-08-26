@@ -1,4 +1,4 @@
-<section class="section subscribe">
+<section class="section subscribe" id="subscribe">
   <div class="container">
     <div class="subscribe__wrapper">
       <div class="subscribe__text-wrapper">
@@ -15,7 +15,14 @@
             type="email"
             placeholder="Enter your email"
             name="subscribe__input"
+            required
           />
+          <div class="subscribe__input-massage">
+            <svg class="subscribe__input-icon" width="12" height="12">
+              <use href="./images/symbol-defs.svg#icon-frame"></use>
+            </svg>
+            <span>Not a valid email address (example@email.com)</span>
+          </div>
           <button class="subscribe__btn btn" type="submit">
             <span class="subscribe__btn-text">Subscribe</span>
           </button>
