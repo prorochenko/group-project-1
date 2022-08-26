@@ -47,11 +47,12 @@
     min-height: 609px;
   }
   @include mq(tab) {
-    min-width: 450px;
+    min-width: 600px;
     min-height: 609px;
   }
   @include mq(desk) {
-    min-width: 528px;
+    min-width: 800px;
+    max-width: 800px;
     min-height: 581px;
   }
 }
@@ -112,45 +113,17 @@
   color: var(--main-txt-cl);
 }
 
-// <!-- menu of the restaurant -->
-.menu__list {
+.register__group {
+  //   margin-bottom: 20px;
+}
+
+.register__form {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 10px;
-
-  margin-bottom: 10px;
 }
-
-.menu__item {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-
-  max-width: 150px;
-}
-.menu__label {
-  text-align: center;
-}
-
-.menu__img {
-  max-width: 150px;
-  border: 10px solid var(--yellow-bg-cl);
-  border-radius: 197.5px;
-  padding: 25px 24px;
-  &:hover,
-  &:focus {
-    border-color: var(--green-btn-bg-cl);
-  }
-}
-
-.register__group {
-  margin-bottom: 20px;
-}
-
 .register__label {
   padding-left: 30px;
 
@@ -209,28 +182,16 @@
 .register__message {
   @extend %input;
 
-  height: 100px;
-  padding: 12px 16px;
+  padding: 10px 20px;
 
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: 0.01em;
+  min-width: 245px;
+
   color: var(--placeholder-txt-cl);
 
-  //   border: 1px solid rgba(33, 33, 33, 0.2);
-  //   border-radius: 4px;
   outline: transparent;
   resize: none;
 
   transition: border-color var(--timing-function);
-
-  &:focus {
-    border-color: var(--border-btn-cl);
-  }
-
-  &::placeholder {
-    color: var(--placeholder-txt-cl);
-  }
 }
 
 // end --- register form  ---end
@@ -304,4 +265,70 @@
   margin-right: auto;
 }
 
+// <!-- menu of the restaurant -->
+.menu__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  margin-bottom: 10px;
+}
+
+.menu__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  //   max-width: px;
+
+  @include mq(mob) {
+    min-width: 102px;
+  }
+}
+.menu__label {
+  text-align: center;
+}
+
+.menu__field {
+  @extend %input;
+
+  height: 40px;
+  padding: 12px 20px;
+
+  font-size: 14px;
+  line-height: 16px;
+
+  //   border: 1px solid rgba(33, 33, 33, 0.2);
+  //   border-radius: 4px;
+  outline: transparent;
+
+  transition: border-color var(--timing-function);
+
+  &:focus {
+    border-color: var(--border-btn-cl);
+  }
+
+  &:focus + .register__icon {
+    fill: var(--border-btn-cl);
+  }
+}
+
+.menu__img {
+  max-width: 100px;
+  border: 5px solid var(--yellow-bg-cl);
+  border-radius: 100px;
+  padding: 7px 7px;
+  &:hover,
+  &:focus {
+    border-color: var(--green-btn-bg-cl);
+  }
+
+  @include mq(mob-only) {
+    display: none;
+  }
+}
 /* end --- agreement with the terms of the contract --- погодження з умовами договору --- end  */

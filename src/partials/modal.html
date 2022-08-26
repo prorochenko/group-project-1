@@ -88,7 +88,7 @@
                 <p>Gamburger 1$</p>
 
                 <input
-                  class="register__field"
+                  class="register__field menu__field"
                   type="number"
                   name="amount"
                   required
@@ -164,7 +164,7 @@
                   </div>
                   <p>Pasta 3$</p>
                   <input
-                    class="register__field"
+                    class="register__field menu__field"
                     type="number"
                     name="amount"
                     required
@@ -242,7 +242,7 @@
                   <p>Pizza 6$</p>
 
                   <input
-                    class="register__field"
+                    class="register__field menu__field"
                     type="number"
                     name="amount"
                     required
@@ -303,7 +303,7 @@
                   <p>Chichen 5$</p>
 
                   <input
-                    class="register__field"
+                    class="register__field menu__field"
                     type="number"
                     name="amount"
                     required
@@ -364,7 +364,7 @@
                   <p>Salat 3$</p>
 
                   <input
-                    class="register__field"
+                    class="register__field menu__field"
                     type="number"
                     name="amount"
                     required
@@ -425,7 +425,7 @@
                   <p>Borshch 5$</p>
 
                   <input
-                    class="register__field"
+                    class="register__field menu__field"
                     type="number"
                     name="amount"
                     required
@@ -438,36 +438,38 @@
           </ul>
 
           <div class="register__group" role="group">
-            <label class="register__wrap">
-              <span class="register__label">Name</span>
-              <input class="register__field" name="user-name" type="text" />
-              <svg class="register__icon" width="18" height="18">
-                <use href="./images/symbol-defs.svg#icon-person"></use>
-              </svg>
-            </label>
-            <label class="register__wrap">
-              <span class="register__label">Phone</span>
-              <input class="register__field" name="user-phone" type="tel" />
-              <svg class="register__icon" width="18" height="18">
-                <use href="./images/symbol-defs.svg#icon-phone"></use>
-              </svg>
-            </label>
-            <label class="register__wrap">
-              <span class="register__label">E-mail</span>
-              <input class="register__field" name="user-mail" type="email" />
-              <svg class="register__icon" width="18" height="18">
-                <use href="./images/symbol-defs.svg#icon-email"></use>
-              </svg>
-            </label>
-            <label class="register__wrap">
-              <span class="register__label">Comment</span>
-              <textarea
-                class="register__message"
-                name="user-message"
-                rows="3"
-                placeholder="Enter your wishes"
-              ></textarea>
-            </label>
+            <div class="register__form">
+              <label class="register__wrap">
+                <span class="register__label">Name</span>
+                <input class="register__field" name="user-name" type="text" />
+                <svg class="register__icon" width="18" height="18">
+                  <use href="./images/symbol-defs.svg#icon-person"></use>
+                </svg>
+              </label>
+              <label class="register__wrap">
+                <span class="register__label">Phone</span>
+                <input class="register__field" name="user-phone" type="tel" />
+                <svg class="register__icon" width="18" height="18">
+                  <use href="./images/symbol-defs.svg#icon-phone"></use>
+                </svg>
+              </label>
+              <label class="register__wrap">
+                <span class="register__label">E-mail</span>
+                <input class="register__field" name="user-mail" type="email" />
+                <svg class="register__icon" width="18" height="18">
+                  <use href="./images/symbol-defs.svg#icon-email"></use>
+                </svg>
+              </label>
+              <label class="register__wrap">
+                <span class="register__label">Comment</span>
+                <textarea
+                  class="register__field register__message"
+                  name="user-message"
+                  rows="1"
+                  placeholder="Enter your wishes"
+                ></textarea>
+              </label>
+            </div>
           </div>
           <label class="agreement">
             <input
