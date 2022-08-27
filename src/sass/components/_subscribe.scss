@@ -3,8 +3,6 @@
   padding-top: 50px;
   &__container {
     @extend %container;
-  }
-  &__wrapper {
     display: flex;
     @include mq(not-desk) {
       flex-direction: column;
