@@ -6,7 +6,7 @@
   box-shadow: var(--footer-shadow);
 
   background-repeat: no-repeat;
-  background-size: ontain, 100%, 100%;
+  background-size: contain, 100%, 100%;
 
   @include mq(mob-only) {
     background-image: url(../images/footer/ap-or_mob@1x.png),
