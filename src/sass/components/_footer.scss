@@ -6,7 +6,7 @@
   box-shadow: var(--footer-shadow);
 
   background-repeat: no-repeat;
-  background-size: contain, 100%, 100%;
+  background-size: auto;
 
   @include mq(mob-only) {
     background-image: url(../images/footer/ap-or_mob@1x.png),
@@ -25,7 +25,7 @@
         url(../images/footer/footer-tab@2x.png);
     }
     background-position: top right, bottom center;
-    background-size: contain;
+    background-size: auto contain;
   }
   @include mq(desk) {
     background-image: url(../images/footer/footer-desk@1x.png);
