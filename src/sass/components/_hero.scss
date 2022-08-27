@@ -128,18 +128,12 @@
     border: 0;
     fill: var(--arrow-bg-cl);
     @include mq(tab) {
-      &--next:hover,
-      &--next:focus,
-      &--prev:hover,
-      &--prev:focus {
+      :is(&--next, &--prev):is(:hover, :focus) {
         fill: var(--arrow-bg-cl);
       }
     }
     @include mq(desk) {
-      &--next:hover,
-      &--next:focus,
-      &--prev:hover,
-      &--prev:focus {
+      :is(&--next, &--prev):is(:hover, :focus) {
         fill: var(--arrow-bg-hover-cl);
       }
     }
