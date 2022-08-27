@@ -6,6 +6,7 @@
   box-shadow: var(--footer-shadow);
 
   background-repeat: no-repeat;
+  background-size: auto;
 
   @include mq(mob-only) {
     background-image: url(../images/footer/ap-or_mob@1x.png),
@@ -24,13 +25,12 @@
         url(../images/footer/footer-tab@2x.png);
     }
     background-position: top right, bottom center;
+    background-size: auto contain;
   }
   @include mq(desk) {
-    background-image: url(../images/footer/footer-desk@1x.png),
-      url(../images/footer/footer-desk@2x.png);
+    background-image: url(../images/footer/footer-desk@1x.png);
     @include mq(retina) {
-      background-image: url(../images/footer/footer-desk@1x.png),
-        url(../images/footer/footer-desk@2x.png);
+      background-image: url(../images/footer/footer-desk@2x.png);
     }
     background-position: bottom center;
     background-size: contain;
@@ -101,23 +101,30 @@
 .footer__subscribe {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 20px;
+  @include mq(mob-only) {
+    flex-direction: column;
+  }
+  @include mq(tab) {
+    flex-direction: column;
+  }
 }
 
 .footer__subscribe-form {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
+
   @include mq(tab) {
     display: flex;
   }
   @include mq(tab) {
-    margin-bottom: 12px;
   }
 }
 
 .footer__subscribe-text {
-  margin-bottom: 12px;
   font-size: 14px;
   line-height: 1.5;
+  margin-bottom: 12px;
 }
 
 .footer__subscribe-label {
@@ -182,7 +189,6 @@
   border: 1px solid var(--border-bth-success);
   border-radius: 30px;
   padding: 11px;
-  margin-bottom: 20px;
 
   &:hover,
   &:focus {
