@@ -166,7 +166,7 @@
 
 
     &:hover, &:focus {
-        background-color: var(--border-btn-cl);
+        border: 2px solid #597D00;
         transform: scale(1.2);
     }
 }

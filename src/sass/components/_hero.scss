@@ -75,7 +75,6 @@
 }
 // slider
 .slider {
-  outline: 1px solid navy;
   @include mq(mob-only) {
     display: none;
   }

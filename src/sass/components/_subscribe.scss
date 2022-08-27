@@ -1,5 +1,6 @@
 .subscribe {
   padding-top: 50px;
+
   &__wrapper {
     display: flex;
     @include mq(not-desk) {
@@ -43,7 +44,7 @@
   }
 
   &__input:focus {
-    outline: 0;
+    outline: transparent;
   }
 
   &__input::placeholder {
@@ -52,57 +53,38 @@
     color: #505050;
   }
 
-  &__input-massage {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-
-    font-size: 10px;
-    line-height: 1.5;
-    color: var(--error-txt-cl);
-  }
-
-  &__input-massage {
-    transition: opacity 250ms linear;
-    position: absolute;
-    top: 46px;
-    left: 0;
-  }
-
   &__input:valid {
     border-color: var(--border-bth-success);
   }
 
-  &__input:valid + &__input-massage {
+  &__input:invalid {
+    border-color: var(--error-txt-cl);
+  }
+
+  &__input:placeholder-shown {
+    border-color: var(--yellow-btn-bg-hover-cl);
+  }
+
+  &__input:not(:placeholder-shown):focus:invalid:required
+  ~ .subscribe__input-massage {
+  opacity: 1;
+  }
+ 
+  &__input-massage {
+    position: absolute;
+    top: 46px;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
     opacity: 0;
-  }
+    font-size: 10px;
+    line-height: 1.5;
+    color: var(--error-txt-cl);
 
-  &__input:not(:focus):invalid + &__input-massage {
-    opacity: 0;
-  }
-
-  &__input:focus + &__input-massage {
-    opacity: 0;
-  }
-
-  &__input:not(:focus):invalid {
-    border-color: var(--border-btn-default);
-  }
-
-  &__input:invalid:not(:focus):not(:placeholder-shown) {
-    border-color: var(--border-bth-error);
-  }
-
-  &__input:invalid:not(:focus):not(:placeholder-shown) + &__input-massage {
-    opacity: 1;
-    transition: 250ms;
-  }
-
-  @include mq(tab) {
-    &__input:invalid:not(:focus):not(:placeholder-shown) + &__input-massage {
-      opacity: 1;
-      transition: 250ms;
-    }
+    transition: opacity 250ms linear;
   }
 
   &__btn {
@@ -112,8 +94,9 @@
     transition: background-color 300ms ease-in;
 
     &:is(:hover, :focus) {
-      background-color: #fff;
+      background-color: var(--yellow-btn-bg-hover-cl);
     }
+
     @include mq(mob-only) {
       display: block;
       margin-left: auto;

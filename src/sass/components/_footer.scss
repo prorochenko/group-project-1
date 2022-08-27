@@ -8,31 +8,30 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
   background-image: url(../images/footer/footer_mob@1x.png);
   @include mq(retina) {
     background-image: url(../images/footer/footer_mob@2x.png);
   }
 
-  @include mq(tab-only) {
-    background-image: url(../images/footer/footer-tab@1x.png);
-
+  @include mq(tab) {
     padding-top: 100px;
     padding-bottom: 100px;
 
+    background-image: url(../images/footer/footer-tab@1x.png);
     @include mq(retina) {
       background-image: url(../images/footer/footer-tab@2x.png);
     }
   }
 
-  // tablet screen
   @include mq(desk) {
-    background-image: url(../images/footer/footer-desk@1x.png);
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
+    background-size: contain;
+    background-position: bottom;
 
-  @include mq(retina) {
-    background-image: url(../images/footer/footer-desk@2x.png);
+    background-image: url(../images/footer/footer-desk@1x.png);
+    @include mq(retina) {
+      background-image: url(../images/footer/footer-desk@2x.png);
+    }
   }
 }
 
@@ -159,6 +158,8 @@
   color: var(--error-txt-cl);
   opacity: 0;
 
+  transition: opacity 250ms linear;
+
   @include mq(tab) {
     top: 80px;
   }
@@ -174,7 +175,7 @@
   width: 102px;
   height: 42px;
   color: var(--main-txt-cl);
-  background-color: var(--green-btn-bg-cl);
+
   border: 0.854167px solid var(--border-bth-success);
   border-radius: 30px;
   padding: 11px;
@@ -182,7 +183,7 @@
 
   &:hover,
   &:focus {
-    background-color: var(--white-bg-cl);
+    background-color: var(--yellow-btn-bg-hover-cl);
   }
 
   @include mq(tab) {
