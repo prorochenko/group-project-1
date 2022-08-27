@@ -6,32 +6,34 @@
   box-shadow: var(--footer-shadow);
 
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 
-  background-image: url(../images/footer/footer_mob@1x.png);
-  @include mq(retina) {
-    background-image: url(../images/footer/footer_mob@2x.png);
+  @include mq(mob-only) {
+    background-image: url(../images/footer/ap-or_mob@1x.png),
+      url(../images/footer/apple@1x.png), url(../images/footer/orange@1x.png);
+    @include mq(retina) {
+      background-image: url(../images/footer/ap-or_mob@2x.png),
+        url(../images/footer/apple@2x.png), url(../images/footer/orange@2x.png);
+    }
+    background-position: bottom center, top 132px left, top right;
   }
-
   @include mq(tab) {
-    padding-top: 100px;
-    padding-bottom: 100px;
-
-    background-image: url(../images/footer/footer-tab@1x.png);
+    background-image: url(../images/footer/orange-tab@1x.png),
+      url(../images/footer/footer-tab@1x.png);
     @include mq(retina) {
-      background-image: url(../images/footer/footer-tab@2x.png);
+      background-image: url(../images/footer/orange-tab@2x.png),
+        url(../images/footer/footer-tab@2x.png);
     }
+    background-position: top right, bottom center;
   }
-
   @include mq(desk) {
-    background-size: contain;
-    background-position: bottom;
-
-    background-image: url(../images/footer/footer-desk@1x.png);
+    background-image: url(../images/footer/footer-desk@1x.png),
+      url(../images/footer/footer-desk@2x.png);
     @include mq(retina) {
-      background-image: url(../images/footer/footer-desk@2x.png);
+      background-image: url(../images/footer/footer-desk@1x.png),
+        url(../images/footer/footer-desk@2x.png);
     }
+    background-position: bottom center;
+    background-size: contain;
   }
 }
 
@@ -42,23 +44,25 @@
   }
   @include mq(desk) {
     display: flex;
+    margin-bottom: 80px;
   }
 }
 
 .footer__menu {
   display: flex;
   flex-wrap: wrap;
+  @include mq(mob-only) {
+    margin-bottom: 40px;
+  }
+  @include mq(tab) {
+    margin-bottom: 40px;
+  }
   @include mq(desk) {
     flex-wrap: nowrap;
   }
 }
 
-.footer__link {
-  margin-bottom: 40px;
-}
-
 .footer__list {
-  margin-bottom: 40px;
   margin-left: 81px;
   @include mq(tab) {
     display: flex;
@@ -94,8 +98,20 @@
   }
 }
 
+.footer__subscribe {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .footer__subscribe-form {
   position: relative;
+  margin-bottom: 20px;
+  @include mq(tab) {
+    display: flex;
+  }
+  @include mq(tab) {
+    margin-bottom: 12px;
+  }
 }
 
 .footer__subscribe-text {
@@ -106,17 +122,12 @@
 
 .footer__subscribe-label {
   @include mq(tab) {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  @include mq(tab) {
-    flex-wrap: nowrap;
+    min-width: 279px;
+    margin-right: 12px;
   }
 }
 
 .footer__subscribe-input {
-  margin-bottom: 20px;
   width: 100%;
   padding: 12px;
   font-size: 12px;
@@ -135,11 +146,6 @@
   &:placeholder-shown {
     border: 0.854167px solid var(--yellow-btn-bg-hover-cl);
   }
-
-  @include mq(tab) {
-    width: 279px;
-    margin-right: 14px;
-  }
 }
 
 .footer__subscribe-input:not(:placeholder-shown):focus:invalid:required
@@ -148,9 +154,6 @@
 }
 
 .footer__subscribe-warning {
-  position: absolute;
-  top: 90px;
-  left: 0;
   display: flex;
   align-items: center;
   font-size: 10px;
@@ -176,7 +179,7 @@
   height: 42px;
   color: var(--main-txt-cl);
 
-  border: 0.854167px solid var(--border-bth-success);
+  border: 1px solid var(--border-bth-success);
   border-radius: 30px;
   padding: 11px;
   margin-bottom: 20px;
@@ -199,6 +202,8 @@
   font-size: 10px;
   line-height: calc(12 / 10);
   color: var(--main-txt-cl);
+  @include mq(desk) {
+  }
 }
 
 .footer__desc-link {
