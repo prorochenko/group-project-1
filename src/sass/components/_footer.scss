@@ -36,7 +36,9 @@
     background-size: contain;
   }
 }
-
+.footer__container {
+  @extend %container;
+}
 .footer__block {
   margin-bottom: 60px;
   @include mq(tab) {
@@ -180,6 +182,7 @@
 }
 
 .footer__button {
+  @extend %btn;
   display: block;
   margin-left: auto;
   width: 102px;

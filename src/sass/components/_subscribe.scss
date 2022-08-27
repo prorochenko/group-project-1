@@ -1,6 +1,9 @@
 .subscribe {
+  @extend %section;
   padding-top: 50px;
-
+  &__container {
+    @extend %container;
+  }
   &__wrapper {
     display: flex;
     @include mq(not-desk) {
@@ -15,6 +18,7 @@
   }
 
   &__title {
+    @extend %section__title;
     margin-bottom: 20px;
 
     @include mq(tab) {
@@ -33,6 +37,7 @@
   }
 
   &__input {
+    @extend %input;
     width: 394px;
     margin-right: 32px;
 
@@ -66,10 +71,10 @@
   }
 
   &__input:not(:placeholder-shown):focus:invalid:required
-  ~ .subscribe__input-massage {
-  opacity: 1;
+    ~ .subscribe__input-massage {
+    opacity: 1;
   }
- 
+
   &__input-massage {
     position: absolute;
     top: 46px;
@@ -88,6 +93,7 @@
   }
 
   &__btn {
+    @extend %btn;
     height: 42px;
     width: 106px;
 
