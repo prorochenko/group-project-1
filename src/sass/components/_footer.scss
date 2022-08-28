@@ -11,6 +11,7 @@
   @include mq(mob-only) {
     background-image: url(../images/footer/ap-or_mob@1x.png),
       url(../images/footer/apple@1x.png), url(../images/footer/orange@1x.png);
+
     @include mq(retina) {
       background-image: url(../images/footer/ap-or_mob@2x.png),
         url(../images/footer/apple@2x.png), url(../images/footer/orange@2x.png);
@@ -139,8 +140,9 @@
 .footer__subscribe-input {
   width: 100%;
   padding: 12px;
+
   font-size: 12px;
-  line-height: 1.5;
+
   border-radius: 30px;
   outline: transparent;
 

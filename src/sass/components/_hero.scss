@@ -3,7 +3,13 @@
   position: relative;
   @include mq(tab) {
     padding-top: 60px;
+    padding-bottom: 73px;
   }
+  @include mq(desk){
+    padding-top: 159px;
+    padding-bottom: 164px;
+  }
+
   &__container {
     @extend %container;
     position: relative;
@@ -11,36 +17,34 @@
 
   &__title {
     margin: 0;
+    font-weight: 700;
     @include mq(mob-only) {
       max-width: 480px;
-      margin: 0 0 28px 0;
+      margin-bottom: 28px;
       font-size: 28px;
       line-height: 1.18;
     }
     @include mq(tab) {
-      max-width: 537px;
       margin-bottom: 44px;
+      max-width: 537px;
       font-size: 42px;
-      line-height: 120%;
+      line-height: 1.2;
     }
-    @include mq(desk) {
-      margin-top: 99px;
+    @include mq(desk){    
       margin-bottom: 28px;
       font-size: 48px;
       line-height: 1.2;
       max-width: 502px;
     }
   }
+  
   &__text {
     @include mq(mob-only) {
-      font-size: 14px;
-      line-height: 150%;
       margin-bottom: 28px;
+      font-size: 14px;
       max-width: 480px;
     }
     @include mq(tab) {
-      font-size: 16px;
-      line-height: 150%;
       margin-bottom: 40px;
       max-width: 336px;
     }
@@ -49,10 +53,11 @@
     }
   }
   &__btn {
-    top: 0;
     @extend %btn;
-    height: 32px;
-    border-radius: 30px;
+    padding: 6px 18px;
+
+    font-weight: 500;
+    font-size: 13px;
 
     transition: background-color 300ms ease-in;
   }

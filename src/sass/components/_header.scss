@@ -14,8 +14,8 @@
 }
 
 .header__link {
-  margin-left: 20px;
   margin-right: auto;
+  display: block;
 }
 
 .header__logo {
@@ -26,7 +26,10 @@
   position: absolute;
   top: 22px;
   right: 20px;
-  border-color: transparent;
+
+  padding: 0;
+
+  border: none;
   background-color: transparent;
   margin-left: auto;
 
@@ -49,7 +52,7 @@
 .nav__list {
   display: flex;
   gap: 28px;
-  margin-right: 28px;
+
   @include mq(mob-only) {
     display: none;
   }
@@ -70,12 +73,9 @@
 
 .nav__btn {
   @extend %btn;
-  text-align: right;
-  height: 32px;
-  margin-left: 28px;
-  font-size: 14px;
-  line-height: 1.5;
 
+  margin-left: 28px;
+  
   @include mq(mob-only) {
     display: none;
   }
