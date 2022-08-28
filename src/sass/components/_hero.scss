@@ -128,18 +128,12 @@
     border: 0;
     fill: var(--arrow-bg-cl);
     @include mq(tab) {
-      &--next:hover,
-      &--next:focus,
-      &--prev:hover,
-      &--prev:focus {
+      :is(&--next, &--prev):is(:hover, :focus) {
         fill: var(--arrow-bg-cl);
       }
     }
     @include mq(desk) {
-      &--next:hover,
-      &--next:focus,
-      &--prev:hover,
-      &--prev:focus {
+      :is(&--next, &--prev):is(:hover, :focus) {
         fill: var(--arrow-bg-hover-cl);
       }
     }
@@ -149,6 +143,9 @@
         height: 28px;
         left: -8px;
         padding: 3.83 13.36 3.83 9.14;
+        transition-property: fill, top;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         &:active {
           fill: var(--arrow-bg-cl);
           top: 147px;
@@ -161,6 +158,9 @@
         height: 40px;
         padding: 5.47 18.53 5.47 13.06;
         border-radius: 8px;
+        transition-property: fill, top;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         &:active {
           fill: var(--arrow-bg-cl);
           top: 268px;
@@ -174,6 +174,9 @@
         width: 34px;
         height: 28px;
         padding: 3.83 9.14 3.83 13.36;
+        transition-property: fill, top;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         &:active {
           fill: var(--arrow-bg-cl);
           top: 147px;
@@ -186,7 +189,9 @@
         height: 40px;
         padding: 5.47 13.06 5.47 18.53;
         border-radius: 8px;
-        z-index: 1;
+        transition-property: fill, top;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         &:active {
           fill: var(--arrow-bg-cl);
           top: 268px;

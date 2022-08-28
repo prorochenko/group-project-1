@@ -1,191 +1,192 @@
 .offerings {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(../images/svg/offering-mob.svg);
-    
-    @include mq(tab) {
-        background-image: url(../images/svg/offering-tab.svg);
-    }
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/svg/offering-mob.svg);
 
-    @include mq(desk){
-        background-image: url(../images/svg/offering-desk.svg);
-        background-size: contain;
-        background-position: center;
-    }
+  @include mq(tab) {
+    background-image: url(../images/svg/offering-tab.svg);
+  }
+
+  @include mq(desk) {
+    background-image: url(../images/svg/offering-desk.svg);
+    background-size: contain;
+    background-position: center;
+  }
 }
 
 .offerings__container {
-    padding-top: 41px;
-    padding-bottom: 60px;
-    
-    @include mq(tab){
-        padding-top: 150px;
-        padding-bottom: 100px;
-        margin-top: -140px;
-    }
+  @extend %container;
+  padding-top: 41px;
+  padding-bottom: 60px;
 
-    @include mq(desk) {
-        display: flex;
-        padding: 0;
-        margin-top: -90px;
-    }
+  @include mq(tab) {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    margin-top: -140px;
+  }
+
+  @include mq(desk) {
+    display: flex;
+    padding: 0;
+    margin-top: -90px;
+  }
 }
 
 .offerings__img {
-    display: block;
+  display: block;
 
-    @include mq(mob-only){
-        margin-right: auto;
-        margin-left: auto;
-        margin-bottom: 60px;
-        width: 280px;
-    }
+  @include mq(mob-only) {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 60px;
+    width: 280px;
+  }
 
-    @include mq(tab) {
-        margin-bottom: 60px;
-    }
+  @include mq(tab) {
+    margin-bottom: 60px;
+  }
 
-    @include mq(desk) {
-        margin-right: 90px;
-        margin-top: 177px;
-        margin-bottom: 75px;
-    }
+  @include mq(desk) {
+    margin-right: 90px;
+    margin-top: 177px;
+    margin-bottom: 75px;
+  }
 }
 
 .offerings__box {
-    max-width: 573px;
+  max-width: 573px;
 }
 
 .offerings__title {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 
-    @include mq(mob-only) {
-        margin-bottom: 28px;
-    }
-   
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 1.17;
+  @include mq(mob-only) {
+    margin-bottom: 28px;
+  }
 
-    @include mq(tab){
-        font-size: 42px;
-    }
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
 
-    @include mq(desk) {
-        margin-top: 260px;
-        line-height: 1.2;
-    }
+  @include mq(tab) {
+    font-size: 42px;
+  }
+
+  @include mq(desk) {
+    margin-top: 260px;
+    line-height: 1.2;
+  }
 }
 
 .offerings__text--main {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 
-    @include mq(mob-only){
-        font-size: 14px;
-        line-height: 1.14;
-    }
+  @include mq(mob-only) {
+    font-size: 14px;
+    line-height: 1.14;
+  }
 
-    @include mq(tab-only){
-        line-height: 1.19;
-    }
+  @include mq(tab-only) {
+    line-height: 1.19;
+  }
 }
 
 .offerings__list {
-    @include mq(tab) {
-        margin-bottom: 40px;
-        display: flex;
-        gap: 67px;
-    }
+  @include mq(tab) {
+    margin-bottom: 40px;
+    display: flex;
+    gap: 67px;
+  }
 
-    @include mq(desk) {
-        margin-bottom: 32px;
-    }
+  @include mq(desk) {
+    margin-bottom: 32px;
+  }
 }
 
 .offerings__item {
-    @include mq(mob-only){
-            margin-bottom: 28px;
-    }
+  @include mq(mob-only) {
+    margin-bottom: 28px;
+  }
 }
 
 .offerings__item--deliv {
-    &::before {
-        content: "";
-        margin-bottom: 10px;
-        display: block;
-        width: 48px;
-        height: 48px;
-        background-image: url('../images/offerings/deliv.svg');
-    }
+  &::before {
+    content: '';
+    margin-bottom: 10px;
+    display: block;
+    width: 48px;
+    height: 48px;
+    background-image: url('../images/offerings/deliv.svg');
+  }
 }
 
 .offerings__item--order {
-    &::before {
-        content: "";
-        margin-bottom: 10px;
-        display: block;
-        width: 48px;
-        height: 48px;
-        background-image: url('../images/offerings/order.svg');
-    }
+  &::before {
+    content: '';
+    margin-bottom: 10px;
+    display: block;
+    width: 48px;
+    height: 48px;
+    background-image: url('../images/offerings/order.svg');
+  }
 }
 
 .offerings__subtitle {
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 1.17;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.17;
 
-    @include mq(desk){
-        font-size: 17px;
-        line-height: 1.4;
-    }
+  @include mq(desk) {
+    font-size: 17px;
+    line-height: 1.4;
+  }
 }
 
 .offerings__text {
-    font-size: 14px;
-    line-height: 1.14;
+  font-size: 14px;
+  line-height: 1.14;
 
-    font-weight: 400;
+  font-weight: 400;
 
-    @include mq(desk) {
-        line-height: 1.5;
-    }
+  @include mq(desk) {
+    line-height: 1.5;
+  }
 }
 
 .offerings__btn {
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    min-height: 40px;
-    background-color: var(--white-bg-cl);
-    border: 2px solid var(--border-btn-cl);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  background-color: var(--white-bg-cl);
+  border: 2px solid var(--border-btn-cl);
 
-    transition: background-color 300ms ease-in;
+  transition: background-color 300ms ease-in;
 
-
-    &:hover, &:focus {
-        border: 2px solid #597D00;
-        transform: scale(1.2);
-    }
+  &:hover,
+  &:focus {
+    border: 2px solid #597d00;
+    transform: scale(1.2);
+  }
 }
 
 .offerings__list--btn {
-    display: flex;
-    gap: 24px;
-    align-items: center;
+  display: flex;
+  gap: 24px;
+  align-items: center;
 }
 
 .offerings__link {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 
-    font-size: 14px;
-    color: var(--dark-txt-cl);
+  font-size: 14px;
+  color: var(--dark-txt-cl);
 
-    @include mq(desk){
-        display: none;
-    }
+  @include mq(desk) {
+    display: none;
+  }
 }
