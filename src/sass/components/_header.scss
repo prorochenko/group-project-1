@@ -22,24 +22,11 @@
   display: block;
 }
 
-.mobile-button {
-  position: absolute;
-  top: 22px;
-  right: 20px;
-
-  padding: 0;
-
-  border: none;
-  background-color: transparent;
-  margin-left: auto;
-
+.hamburger {
+  
   @include mq(tab) {
     display: none;
   }
-}
-
-.mobile-button__icon {
-  display: block;
 }
 
 .nav {
