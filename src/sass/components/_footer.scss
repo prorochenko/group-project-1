@@ -1,12 +1,11 @@
 .footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  @extend %section;
 
   background-color: var(--white-bg-cl);
   box-shadow: var(--footer-shadow);
 
   background-repeat: no-repeat;
-  background-size: auto;
+
 
   @include mq(mob-only) {
     background-image: url(../images/footer/ap-or_mob@1x.png),
@@ -17,6 +16,7 @@
         url(../images/footer/apple@2x.png), url(../images/footer/orange@2x.png);
     }
     background-position: bottom center, top 132px left, top right;
+    background-size: 253px, 110px, 104px;
   }
   @include mq(tab) {
     background-image: url(../images/footer/orange-tab@1x.png),
@@ -26,7 +26,7 @@
         url(../images/footer/footer-tab@2x.png);
     }
     background-position: top right, bottom center;
-    background-size: auto contain;
+    background-size: 203px 365px, contain;
   }
   @include mq(desk) {
     background-image: url(../images/footer/footer-desk@1x.png);
@@ -190,8 +190,10 @@
   width: 102px;
   height: 42px;
   color: var(--main-txt-cl);
+  font-weight: 500;
 
   border: 1px solid var(--border-bth-success);
+  background-color: transparent;
   border-radius: 30px;
   padding: 11px;
 
