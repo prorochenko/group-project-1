@@ -196,6 +196,7 @@
   background-color: transparent;
   border-radius: 30px;
   padding: 11px;
+  transition: background-color 300ms ease-in;
 
   &:hover,
   &:focus {
