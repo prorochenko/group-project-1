@@ -41,15 +41,20 @@
     margin-left: auto;
     margin-bottom: 60px;
     width: 280px;
+    height: 309px;
   }
 
   @include mq(tab) {
     margin-bottom: 60px;
+    width: 704px;
+    height: 394px;
   }
 
   @include mq(desk) {
     margin-right: 90px;
     margin-bottom: 0;
+    width: 550px;
+    height: 604px;
   }
 }
 
