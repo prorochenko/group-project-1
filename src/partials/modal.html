@@ -1,67 +1,31 @@
+<section>
+  <div class="backdrop backdrop--hidden" data-modal>
+    <h2 class="visually-hidden">Complete your order, we will call you back</h2>
+    <div class="modal__bg">
+      <div class="modal">
+        <button class="button-close" data-modal-close>
+          <svg class="button-close__icon">
+            <use
+              href="./images/symbol-defs.svg#icon-close-7"
+              width="11px"
+              height="11px"
+            ></use>
+          </svg>
+        </button>
 
-<!-- modal window - модальне вікно-->
+        <form class="register__form" name="register__form">
+          <strong class="register__title"
+            >Complete your order, we will call you back</strong
+          >
 
-<div class="backdrop backdrop--hidden" data-modal>
-  <div class="modal__bg">
-    <div class="modal">
-      <button class="button-close" data-modal-close>
-        <svg class="button-close__icon">
-          <use
-            href="./images/symbol-defs.svg#icon-close-7"
-            width="11px"
-            height="11px"
-          ></use>
-        </svg>
-      </button>
-      <form class="register__form" name="register__form">
-        <strong class="register__title"
-          >Complete your order, we will call you back</strong
-        >
+          <!-- menu of the restaurant -->
 
-        <!-- menu of the restaurant -->
-
-        <ul class="menu__list">
-          <li class="menu__item">
-            <label class="menu__label">
-              <div class="menu__img">
-                <picture>
-                  <!-- Desktop screen -->
+          <ul class="menu__list">
+            <li class="menu__item">
+              <label class="menu__label">
+                <picture class="menu__img">
                   <source
-                    media="(min-width: 1200px)"
-                    srcset="
-                      ./images/favorites/img_001_desk@1x.png  1x,
-                      ./images/favorites/img_001_desk@2x.webp 2x
-                    "
-                    type="image/webp"
-                  />
-                  <source
-                    media="(min-width: 1200px)"
-                    srcset="
-                      ./images/favorites/img_001_desk@1x.png 1x,
-                      ./images/favorites/img_001_desk@2x.png 2x
-                    "
-                    type="image/png"
-                  />
-                  <!-- Tablet screen -->
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      ./images/favorites/img_001_tab@1x.webp 1x,
-                      ./images/favorites/img_001_tab@2x.webp 2x
-                    "
-                    type="image/webp"
-                  />
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      ./images/favorites/img_001_tab@1x.png 1x,
-                      ./images/favorites/img_001_tab@2x.png 2x
-                    "
-                    type="image/png"
-                  />
-                  <!-- Mobile screen -->
-                  <source
-                    media="(max-width: 767px)"
+                    media="(max-width: 100px)"
                     srcset="
                       ./images/favorites/img_001_mob@1x.webp 1x,
                       ./images/favorites/img_001_mob@2x.webp 2x
@@ -69,7 +33,7 @@
                     type="image/webp"
                   />
                   <source
-                    media="(max-width: 767px)"
+                    media="(max-width: 100px)"
                     srcset="
                       ./images/favorites/img_001_mob@1x.png 1x,
                       ./images/favorites/img_001_mob@2x.png 2x
@@ -79,64 +43,29 @@
                   <img
                     src="./images/favorites/img_001_mob@1x.png"
                     alt="gallery"
-                    width="315"
-                    height="315"
+                    width="100"
+                    height="100"
                     loading="lazy"
                   />
                 </picture>
-              </div>
-              <span>Gamburger 1$</span>
-              <input
-                class="register__field menu__field"
-                type="number"
-                name="amount"
-                required
-                min="1"
-                max="10"
-              />
-            </label>
-          </li>
-          <li class="menu__item">
-            <label class="menu__label">
-              <div class="menu__img">
-                <picture>
-                  <!-- Desktop screen -->
-                  <source
-                    media="(min-width: 1200px)"
-                    srcset="
-                      ./images/favorites/img_002_desk@1x.webp 1x,
-                      ./images/favorites/img_002_desk@2x.webp 2x
-                    "
-                    type="image/webp"
-                  />
-                  <source
-                    media="(min-width: 1200px)"
-                    srcset="
-                      ./images/favorites/img_002_desk@1x.png 1x,
-                      ./images/favorites/img_002_desk@2x.png 2x
-                    "
-                    type="image/png"
-                  />
-                  <!-- Tablet screen -->
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      ./images/favorites/img_002_tab@1x.webp 1x,
-                      ./images/favorites/img_002_tab@2x.webp 2x
-                    "
-                    type="image/webp"
-                  />
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      ./images/favorites/img_002_tab@1x.png 1x,
-                      ./images/favorites/img_002_tab@2x.png 2x
-                    "
-                    type="image/png"
-                  />
+
+                <span>Gamburger 1$</span>
+                <input
+                  class="register__field menu__field"
+                  type="number"
+                  name="amount"
+                  required
+                  min="1"
+                  max="50"
+                />
+              </label>
+            </li>
+            <li class="menu__item">
+              <label class="menu__label">
+                <picture class="menu__img">
                   <!-- Mobile screen -->
                   <source
-                    media="(max-width: 767px)"
+                    media="(max-width: 100px)"
                     srcset="
                       ./images/favorites/img_002_mob@1x.webp 1x,
                       ./images/favorites/img_002_mob@2x.webp 2x
@@ -144,7 +73,7 @@
                     type="image/webp"
                   />
                   <source
-                    media="(max-width: 767px)"
+                    media="(max-width: 100px)"
                     srcset="
                       ./images/favorites/img_002_mob@1x.png 1x,
                       ./images/favorites/img_002_mob@2x.png 2x
@@ -154,64 +83,29 @@
                   <img
                     src="./images/favorites/img_002_mob@1x.png"
                     alt="gallery"
-                    width="315"
-                    height="315"
+                    width="100"
+                    height="100"
                     loading="lazy"
                   />
                 </picture>
-              </div>
-              <span>Pasta 3$</span>
-              <input
-                class="register__field menu__field"
-                type="number"
-                name="amount"
-                required
-                min="1"
-                max="10"
-              />
-            </label>
-          </li>
-          <li class="menu__item">
-            <label class="menu__label">
-              <div class="menu__img">
-                <picture>
-                  <!-- Desktop screen -->
-                  <source
-                    media="(min-width: 1200px)"
-                    srcset="
-                      ./images/favorites/img_003_desk@1x.webp 1x,
-                      ./images/favorites/img_003_desk@2x.webp 2x
-                    "
-                    type="image/webp"
-                  />
-                  <source
-                    media="(min-width: 1200px)"
-                    srcset="
-                      ./images/favorites/img_003_desk@1x.png 1x,
-                      ./images/favorites/img_003_desk@2x.png 2x
-                    "
-                    type="image/png"
-                  />
-                  <!-- Tablet screen -->
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      ./images/favorites/img_003_tab@1x.webp 1x,
-                      ./images/favorites/img_003_tab@2x.webp 2x
-                    "
-                    type="image/webp"
-                  />
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      ./images/favorites/img_003_tab@1x.png 1x,
-                      ./images/favorites/img_003_tab@2x.png 2x
-                    "
-                    type="image/png"
-                  />
+
+                <span>Pasta 3$</span>
+                <input
+                  class="register__field menu__field"
+                  type="number"
+                  name="amount"
+                  required
+                  min="1"
+                  max="50"
+                />
+              </label>
+            </li>
+            <li class="menu__item">
+              <label class="menu__label">
+                <picture class="menu__img">
                   <!-- Mobile screen -->
                   <source
-                    media="(max-width: 767px)"
+                    media="(max-width: 100px)"
                     srcset="
                       ./images/favorites/img_003_mob@1x.webp 1x,
                       ./images/favorites/img_003_mob@2x.webp 2x
@@ -219,7 +113,7 @@
                     type="image/webp"
                   />
                   <source
-                    media="(max-width: 767px)"
+                    media="(max-width: 100px)"
                     srcset="
                       ./images/favorites/img_003_mob@1x.png 1x,
                       ./images/favorites/img_003_mob@2x.png 2x
@@ -229,48 +123,30 @@
                   <img
                     src="./images/favorites/img_003_mob@1x.png"
                     alt="gallery"
-                    width="315"
-                    height="315"
+                    width="100"
+                    height="100"
                     loading="lazy"
                   />
                 </picture>
-              </div>
-              <span>Pizza 6$</span>
 
-              <input
-                class="register__field menu__field"
-                type="number"
-                name="amount"
-                required
-                min="1"
-                max="10"
-              />
-            </label>
-          </li>
-          <li class="menu__item">
-            <label class="menu__label">
-              <div class="menu__img">
-                <picture>
-                  <!-- Desktop screen -->
+                <span>Pizza 6$</span>
+
+                <input
+                  class="register__field menu__field"
+                  type="number"
+                  name="amount"
+                  required
+                  min="1"
+                  max="50"
+                />
+              </label>
+            </li>
+            <li class="menu__item">
+              <label class="menu__label">
+                <picture class="menu__img">
+                  <!-- Mobile screen -->
                   <source
-                    media="(min-width: 1200px)"
-                    srcset="
-                      ./images/favorites/img_004_desk@1x.webp 1x,
-                      ./images/favorites/img_004_desk@2x.webp 2x
-                    "
-                    type="image/webp"
-                  />
-                  <source
-                    media="(min-width: 1200px)"
-                    srcset="
-                      ./images/favorites/img_004_desk@1x.png 1x,
-                      ./images/favorites/img_004_desk@2x.png 2x
-                    "
-                    type="image/png"
-                  />
-                  <!-- Tablet screen -->
-                  <source
-                    media="(min-width: 768px)"
+                    media="(max-width: 100px)"
                     srcset="
                       ./images/favorites/img_004_tab@1x.webp 1x,
                       ./images/favorites/img_004_tab@2x.webp 2x
@@ -278,7 +154,7 @@
                     type="image/webp"
                   />
                   <source
-                    media="(min-width: 768px)"
+                    media="(max-width: 100px)"
                     srcset="
                       ./images/favorites/img_004_tab@1x.png 1x,
                       ./images/favorites/img_004_tab@2x.png 2x
@@ -288,48 +164,29 @@
                   <img
                     src="./images/favorites/img_004_tab@1x.png"
                     alt="gallery"
-                    width="315"
-                    height="315"
+                    width="100"
+                    height="100"
                     loading="lazy"
                   />
                 </picture>
-              </div>
-              <span>Chichen 5$</span>
 
-              <input
-                class="register__field menu__field"
-                type="number"
-                name="amount"
-                required
-                min="1"
-                max="10"
-              />
-            </label>
-          </li>
-          <li class="menu__item">
-            <label class="menu__label">
-              <div class="menu__img">
-                <picture>
-                  <!-- Desktop screen -->
+                <span>Chichen 5$</span>
+
+                <input
+                  class="register__field menu__field"
+                  type="number"
+                  name="amount"
+                  required
+                  min="1"
+                  max="50"
+                />
+              </label>
+            </li>
+            <li class="menu__item">
+              <label class="menu__label">
+                <picture class="menu__img">
                   <source
-                    media="(min-width: 1200px)"
-                    srcset="
-                      ./images/favorites/img_005_desk@1x.webp 1x,
-                      ./images/favorites/img_005_desk@2x.webp 2x
-                    "
-                    type="image/webp"
-                  />
-                  <source
-                    media="(min-width: 1200px)"
-                    srcset="
-                      ./images/favorites/img_005_desk@1x.png 1x,
-                      ./images/favorites/img_005_desk@2x.png 2x
-                    "
-                    type="image/png"
-                  />
-                  <!-- Tablet screen -->
-                  <source
-                    media="(min-width: 768px)"
+                    media="(max-width: 100px)"
                     srcset="
                       ./images/favorites/img_005_tab@1x.webp 1x,
                       ./images/favorites/img_005_tab@2x.webp 2x
@@ -337,7 +194,7 @@
                     type="image/webp"
                   />
                   <source
-                    media="(min-width: 768px)"
+                    media="(max-width: 100px)"
                     srcset="
                       ./images/favorites/img_005_tab@1x.png 1x,
                       ./images/favorites/img_005_tab@2x.png 2x
@@ -347,48 +204,29 @@
                   <img
                     src="./images/favorites/img_005_tab@1x.png"
                     alt="gallery"
-                    width="315"
-                    height="315"
+                    width="100"
+                    height="100"
                     loading="lazy"
                   />
                 </picture>
-              </div>
-              <span>Salat 3$</span>
 
-              <input
-                class="register__field menu__field"
-                type="number"
-                name="amount"
-                required
-                min="1"
-                max="10"
-              />
-            </label>
-          </li>
-          <li class="menu__item">
-            <label class="menu__label">
-              <div class="menu__img">
-                <picture>
-                  <!-- Desktop screen -->
+                <span>Salat 3$</span>
+
+                <input
+                  class="register__field menu__field"
+                  type="number"
+                  name="amount"
+                  required
+                  min="1"
+                  max="50"
+                />
+              </label>
+            </li>
+            <li class="menu__item">
+              <label class="menu__label">
+                <picture class="menu__img">
                   <source
-                    media="(min-width: 1200px)"
-                    srcset="
-                      ./images/favorites/img_006_desk@1x.webp 1x,
-                      ./images/favorites/img_006_desk@2x.webp 2x
-                    "
-                    type="image/webp"
-                  />
-                  <source
-                    media="(min-width: 1200px)"
-                    srcset="
-                      ./images/favorites/img_006_desk@1x.png 1x,
-                      ./images/favorites/img_006_desk@2x.png 2x
-                    "
-                    type="image/png"
-                  />
-                  <!-- Tablet screen -->
-                  <source
-                    media="(min-width: 768px)"
+                    media="(max-width: 100px)"
                     srcset="
                       ./images/favorites/img_006_tab@1x.webp 1x,
                       ./images/favorites/img_006_tab@2x.webp 2x
@@ -396,7 +234,7 @@
                     type="image/webp"
                   />
                   <source
-                    media="(min-width: 768px)"
+                    media="(max-width: 100px)"
                     srcset="
                       ./images/favorites/img_006_tab@1x.png 1x,
                       ./images/favorites/img_006_tab@2x.png 2x
@@ -406,98 +244,88 @@
                   <img
                     src="./images/favorites/img_006_tab@1x.png"
                     alt="gallery"
-                    width="315"
-                    height="315"
+                    width="100"
+                    height="100"
                     loading="lazy"
                   />
                 </picture>
-              </div>
-              <span>Borshch 5$</span>
 
-              <input
-                class="register__field menu__field"
-                type="number"
-                name="amount"
-                required
-                min="1"
-                max="10"
-              />
-            </label>
-          </li>
-        </ul>
+                <span>Borshch 5$</span>
 
-        <div class="register__group" role="group">
-          <div class="register__form">
-            <label class="register__wrap">
-              <span class="register__label">Name</span>
-              <input class="register__field" name="user-name" type="text" />
-              <svg class="register__icon" width="18" height="18">
-                <use href="./images/symbol-defs.svg#icon-person"></use>
-              </svg>
-            </label>
-            <label class="register__wrap">
-              <span class="register__label">Phone</span>
-              <input class="register__field" name="user-phone" type="tel" />
-              <svg class="register__icon" width="18" height="18">
-                <use href="./images/symbol-defs.svg#icon-phone"></use>
-              </svg>
-            </label>
-            <label class="register__wrap">
-              <span class="register__label">E-mail</span>
-              <input class="register__field" name="user-mail" type="email" />
-              <svg class="register__icon" width="18" height="18">
-                <use href="./images/symbol-defs.svg#icon-email"></use>
-              </svg>
-            </label>
-            <label class="register__wrap">
-              <span class="register__label">Comment</span>
-              <textarea
-                class="register__message"
-                name="user-message"
-                rows="1"
-                placeholder="Enter your wishes"
-              ></textarea>
-            </label>
+                <input
+                  class="register__field menu__field"
+                  type="number"
+                  name="amount"
+                  required
+                  min="1"
+                  max="50"
+                />
+              </label>
+            </li>
+          </ul>
+
+          <div class="register__group" role="group">
+            <div class="register__form">
+              <label class="register__wrap">
+                <span class="register__label">Name</span>
+                <input class="register__field" name="user-name" type="text" />
+                <svg class="register__icon" width="18" height="18">
+                  <use href="./images/symbol-defs.svg#icon-person"></use>
+                </svg>
+              </label>
+              <label class="register__wrap">
+                <span class="register__label">Phone</span>
+                <input class="register__field" name="user-phone" type="tel" />
+                <svg class="register__icon" width="18" height="18">
+                  <use href="./images/symbol-defs.svg#icon-phone"></use>
+                </svg>
+              </label>
+              <label class="register__wrap">
+                <span class="register__label">E-mail</span>
+                <input class="register__field" name="user-mail" type="email" />
+                <svg class="register__icon" width="18" height="18">
+                  <use href="./images/symbol-defs.svg#icon-email"></use>
+                </svg>
+              </label>
+              <label class="register__wrap">
+                <span class="register__label">Comment</span>
+                <textarea
+                  class="register__message"
+                  name="user-message"
+                  rows="1"
+                  placeholder="Enter your wishes"
+                ></textarea>
+              </label>
+            </div>
           </div>
-        </div>
-        <label class="agreement">
-          <input
-            class="agreement__checkbox visually-hidden"
-            type="checkbox"
-            name="user-agreement"
-          />
-          <svg class="agreement__icon" width="16" height="15">
-
-<div class="backdrop backdrop--hidden" data-modal>
-    <div class="modal__bg">
-      <div class="modal">
-        <button class="button-close" data-modal-close>
-          <svg class="button-close__icon">
-
-            <use
-              class="agreement__icon--uncheck"
-              href="./images/symbol-defs.svg#icon-unchecked"
-            ></use>
-            <use
-              class="agreement__icon--check"
-              href="./images/symbol-defs.svg#icon-checked"
-            ></use>
-          </svg>
-          <span class="agreement__text">
-            I consent to the processing of my personal data
-            <a class="agreement__link" href="" target="_blank"
-              >according to the privacy policy</a
-            >
-          </span>
-        </label>
-        <button class="hero__btn btn agreement__button" type="submit">
-          Send order
-        </button>
-      </form>
+          <label class="agreement">
+            <input
+              class="agreement__checkbox visually-hidden"
+              type="checkbox"
+              name="user-agreement"
+            />
+            <svg class="agreement__icon" width="16" height="15">
+              <use
+                class="agreement__icon--uncheck"
+                href="./images/symbol-defs.svg#icon-unchecked"
+              ></use>
+              <use
+                class="agreement__icon--check"
+                href="./images/symbol-defs.svg#icon-checked"
+              ></use>
+            </svg>
+            <span class="agreement__text">
+              I consent to the processing of my personal data
+              <a class="agreement__link" href="" target="_blank"
+                >according to the privacy policy</a
+              >
+            </span>
+          </label>
+          <button class="hero__btn btn agreement__button" type="submit">
+            Send order
+          </button>
+        </form>
+      </div>
     </div>
-
   </div>
-</div>
-
-  </div>
-
+</section>
