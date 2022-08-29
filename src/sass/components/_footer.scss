@@ -6,7 +6,6 @@
 
   background-repeat: no-repeat;
 
-
   @include mq(mob-only) {
     background-image: url(../images/footer/ap-or_mob@1x.png),
       url(../images/footer/apple@1x.png), url(../images/footer/orange@1x.png);
@@ -47,6 +46,7 @@
   }
   @include mq(desk) {
     display: flex;
+    justify-content: space-between;
     margin-bottom: 80px;
   }
 }
@@ -62,6 +62,7 @@
   }
   @include mq(desk) {
     flex-wrap: nowrap;
+    margin-bottom: 0px;
   }
 }
 
@@ -76,7 +77,7 @@
   @include mq(desk) {
     margin-top: 18px;
     margin-left: 145px;
-    margin-right: 270px;
+
     align-items: flex-start;
   }
 }
@@ -104,11 +105,13 @@
 .footer__subscribe {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 20px;
   @include mq(mob-only) {
     flex-direction: column;
   }
   @include mq(tab) {
+    flex-direction: column;
+  }
+  @include mq(desk) {
     flex-direction: column;
   }
 }
@@ -196,6 +199,7 @@
   background-color: transparent;
   border-radius: 30px;
   padding: 11px;
+  transition: background-color 300ms ease-in;
 
   &:hover,
   &:focus {
