@@ -46,6 +46,7 @@
   }
   @include mq(desk) {
     display: flex;
+    justify-content: space-between;
     margin-bottom: 80px;
   }
 }
@@ -62,7 +63,6 @@
   @include mq(desk) {
     flex-wrap: nowrap;
     margin-bottom: 0px;
-    margin-right: 270px;
   }
 }
 
