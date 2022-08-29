@@ -3,7 +3,12 @@
 // Hamburger
 // ==================================================
 .hamburger {
-  display: inline-block;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 
   transition-property: opacity, filter;
