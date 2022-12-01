@@ -2,10 +2,10 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://AnnaKarachkovska.github.io/it-pilots-project",
+  "homepage": "https://prorochenko.github.io/group-project-1-foodstar",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /it-pilots-project/"
+    "build": "parcel build src/*.html --public-url /group-project-1-foodstar/"
   },
   "repository": {
     "type": "git",
